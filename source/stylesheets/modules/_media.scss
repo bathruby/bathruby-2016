@@ -1,0 +1,22 @@
+// Media
+.media{
+  @include clearfix();
+  margin-bottom: 40px;
+  .sponsor-logo{
+    margin-bottom: 20px;
+    max-width: 260px;
+    margin: 0 auto;
+  }
+
+
+  @include respond-min($bp-tablet){
+    .sponsor-logo{
+      float: left;
+      margin: 0 40px 0 0;
+    }
+    p{
+      overflow: hidden;
+    }
+
+  }
+}

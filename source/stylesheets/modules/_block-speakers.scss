@@ -1,5 +1,10 @@
 // Speakers Block
 
+@mixin omega-reset($nth) {
+  &:nth-child(#{$nth}) { margin-right: flex-gutter(); }
+  &:nth-child(#{$nth}+1) { clear: none }
+}
+
 .block.speakers {
   background: transparent;
   color: $contrast;
@@ -43,4 +48,23 @@
     }
     
   }
+
+  @include respond-min($bp-tablet) {
+    li{
+      @include span-columns(4);
+      @include omega(3n);
+    }
+  }
+
+    @include respond-min($bp-desktop) {
+    li{
+      @include omega-reset(3n);
+      @include span-columns(2);
+      @include omega(6n);
+    }
+  }
+
+
 }
+
+

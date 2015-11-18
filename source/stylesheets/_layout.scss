@@ -1,19 +1,27 @@
 .row{
   @include clearfix();
-  &.food-drink .col,
-  &.accommodation .col {
-    @include respond-min($bp-tablet){
+  @include respond-min($bp-tablet){
+    margin-bottom: 40px;
+
+    &.food-drink .col,
+    &.accommodation .col {
       @include span-columns(4);
       @include omega(3n);
     }
-  }
 
-  &.travel .col,
-  &.intro .col{
-    @include respond-min($bp-tablet){
+    &.travel .col{
       @include span-columns(6);
       @include omega(2n);
     }
+
+    &.intro .col.sub-nav {
+      @include span-columns(4);
+    }
+
+    &.intro .col.main {
+      @include span-columns(8);
+    }
+  
   }
 
 }
