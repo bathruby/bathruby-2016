@@ -1,0 +1,14 @@
+// Hero
+.block.hero{
+  background: transparent;
+  color: $contrast;
+
+  h1{color: $light;}
+
+  h2 span{color: $light;display: block;}
+
+  a{
+    color: $contrast;
+    &:hover{color: $light;}
+  }
+}

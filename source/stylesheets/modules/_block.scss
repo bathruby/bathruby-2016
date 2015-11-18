@@ -1,0 +1,11 @@
+// Block
+// ------------------------------------------------------------
+
+.block {
+  @include clearfix();
+  display: block;
+  padding: 75px 0 75px 0;
+  @include respond-min($bp-tablet){
+    padding: 100px 0 100px 0;
+  }
+}

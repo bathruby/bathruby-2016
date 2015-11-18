@@ -1,0 +1,46 @@
+// Tickets
+// ------------------------------------------------------------
+
+.block.tickets{
+  @include clearfix();
+  background: $contrast;
+  color: $light; 
+
+  h1{color: $light;}
+
+  h2{
+    background: url("/images/underline-red.gif") no-repeat left bottom;
+    background-size: 20px 2px;
+    padding-bottom: 17px;
+  }
+}
+
+.release{
+  @include clearfix();
+  display: block;
+  margin: 0 0 40px 0;
+  max-width: 300px;
+  @include respond-min($bp-tablet){
+    float: left;
+    width: 30%;
+    margin: 0 5% 0 0;
+    &:nth-child(3n){margin-right: 0;}
+  }
+
+}
+
+.cost{
+  color: $main;
+  width: 50%;
+  float: left;
+  span{
+    color: $light;
+    display: block;
+    @include type-main-heading();
+  }
+}
+
+.sold-out{
+  @include type-main-heading();
+}
+

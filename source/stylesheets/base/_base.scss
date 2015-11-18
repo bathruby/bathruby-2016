@@ -1,0 +1,52 @@
+// Base
+// Base styles for HTML elements. No class's or IDs should be used here.
+
+// HTML
+// ------------------------------------------------------------
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+// Body
+// ------------------------------------------------------------
+
+body {
+  color: $contrast;
+  background: $light;
+  background-size: 800px;
+  @include font-size(14);
+  @include font-roman;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.5;
+}
+
+// Links
+// ------------------------------------------------------------
+a {
+  color: $main;
+  text-decoration: none;
+  transition: color 0.2s;
+  @include font-heavy;
+  &:hover{ color: $contrast;}
+}
+
+a img {border: none;}
+
+// List
+// ------------------------------------------------------------
+ul li {list-style-type:disc;}
+
+// Images
+// ------------------------------------------------------------
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+// Table
+// ------------------------------------------------------------
+table {border-collapse: collapse;}

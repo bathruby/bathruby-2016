@@ -1,0 +1,85 @@
+// Typography
+// ------------------------------------------------------------
+
+@import url("//hello.myfonts.net/count/2fb326");
+
+@font-face {
+  font-family: 'CaeciliaLTPro-55Roman';
+  src: url('/fonts/2FB326_0_0.eot');
+  src: url('/fonts/2FB326_0_0.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/2FB326_0_0.woff2') format('woff2'),
+       url('/fonts/2FB326_0_0.woff') format('woff'),
+       url('/fonts/2FB326_0_0.ttf') format('truetype');
+}
+
+@font-face {font-family: 'CaeciliaLTPro-85Heavy';
+  src: url('/fonts/2FB326_1_0.eot');
+  src: url('/fonts/2FB326_1_0.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/2FB326_1_0.woff2') format('woff2'),
+       url('/fonts/2FB326_1_0.woff') format('woff'),
+       url('/fonts/2FB326_1_0.ttf') format('truetype');
+}
+
+
+// Type Mixins
+@mixin font-sans{
+  font-family: 'Source Sans Pro', Arial,"Helvetica Neue",Helvetica,sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
+@mixin font-roman{
+  font-family: 'CaeciliaLTPro-55Roman', 'Lucida Bright', Georgia, serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
+@mixin font-heavy{
+  font-family: 'CaeciliaLTPro-85Heavy', 'Lucida Bright', Georgia, serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
+// Main heading
+@mixin type-main-heading {
+  @include font-sans();
+  @include font-size(37.5);
+  font-weight: 700;
+  text-transform: none;
+  line-height: 1.1;
+  @include respond-min($bp-tablet){
+    @include font-size(50);
+  }
+}
+
+
+// Paragraphs
+p{
+  margin: 0 0 1em 0;
+}
+
+// Headings
+
+h1, h2{@include font-sans; margin: 0 0 0.83em 0;}
+h3, h4, h5, h6  {@include font-heavy; margin: 0 0 1em 0;}
+
+h1{
+  @include type-main-heading();
+}
+
+h2 {
+  @include font-size(20);
+  text-transform: uppercase;
+  @include font-sans;
+}
+
+h3 {
+  @include font-size(14);
+  @include font-heavy;
+}
+
+// Strong / Bold 
+
+strong, b {
+  @include font-heavy;
+}

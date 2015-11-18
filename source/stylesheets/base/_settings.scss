@@ -1,0 +1,77 @@
+// Settings
+// ------------------------------------------------------------
+
+// Vars
+// ------------------------------------------------------------
+
+// Colours
+$light:#fff;               // White
+$dark:#170c2c;             // Dark Text
+
+$main:#ed1b24;             // Red
+$contrast: #160c2e;        // Dark Blue
+$contrast-light: #c4c4c4;  // Lightest Grey
+$border: #e8e8e8;          // Light Grey
+
+// Base Font Size
+$basefont: 14;
+
+// Breakpoints
+$bp-tablet: 768px;
+$bp-desktop: 1024px; 
+
+
+// Mixins
+// ------------------------------------------------------------
+@mixin list_style_none {
+  background: none;
+  padding-left: 0;
+  list-style-type: none;
+  list-style-position: outside;
+}
+
+@mixin font_size($size) {
+  font-size: $size + px;
+  font-size: ($size/$basefont) + 0rem;
+}
+
+@mixin image-replacement {
+ overflow: hidden;
+ text-align: left;
+ display: block;
+ line-height:0;
+ text-indent: -1000em;
+}
+
+@mixin clearfix {
+  &::after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+}
+
+// Media Query Setup
+$fix-mqs: false !default;
+
+@mixin respond-min($width) {
+  @if $fix-mqs {
+    @if $fix-mqs >= $width {
+      @content;
+    }
+  } @else {
+    @media screen and (min-width: $width) {
+      @content;
+    }
+  }
+}
+
+@mixin old-ie {
+  @if $old-ie {
+    @content;
+  }
+}
+
+// Helper Classes
+// ------------------------------------------------------------
+.hidden{display: none;}

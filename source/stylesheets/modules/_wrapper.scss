@@ -1,0 +1,21 @@
+// Wrapper
+// ------------------------------------------------------------
+
+.wrapper{
+  @include clearfix();
+  padding: 0 32px;
+
+  @include respond-min($bp-tablet) {
+    padding: 0 76px;
+  }
+
+  @include respond-min($bp-desktop) {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  @include respond-min(1352px) {
+    padding: 0; 
+  }
+
+}

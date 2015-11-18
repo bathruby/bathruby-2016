@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Bath Ruby Conference - 11th March 2015</title>
+    <%= stylesheet_link_tag "application" %>
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
+  </head>
+
+  <body class="<%= page_classes %>">
+    <header class="site-header">
+      <div class="wrapper">
+        <%= link_to 'Bath Ruby', '/', :class => "logo" %>
+        <nav class="main-nav">
+          <ul>
+            <li class="nav-home"><%= link_to 'Home', '/' %></li>
+            <li class="nav-schedule"><%= link_to 'Schedule', '/schedule' %></li>
+            <li class="nav-information"><%= link_to 'Information', '/information' %></li>
+            <li class="nav-sponsors"><%= link_to 'Sponsors', '/sponsors' %></li>
+            <li class="nav-tickets"><%= link_to 'Tickets', '/tickets' %></li>
+          </ul>
+        </nav>
+        <a href="#" class="menu">Menu</a>
+      </div>
+    </header>
+
+    <%= yield %>
+
+
+    <section class="block tickets">
+      <div class="wrapper">
+
+        <h1>Tickets</h1>
+
+        <div class="releases">
+
+          <div class="release">
+            <h2>First Release</h2>
+            <p class="cost">Regular</p>
+            <p class="cost">Student</p>
+            <p class="sold-out">Sold Out</p>
+          </div>
+
+          <div class="release">
+            <h2>Second Release</h2>
+            <p class="cost">
+              Regular
+              <span>&pound;79</span>
+            </p>
+            <p class="cost">
+              Student
+              <span>&pound;39</span>
+            </p>
+            <%= link_to 'Buy Now', '#', :class => "btn" %>
+          </div>
+
+          <div class="release">
+            <h2>Third Release</h2>
+            <p class="cost">
+              Regular
+              <span>&pound;99</span>
+            </p>
+            <p class="cost">
+              Student
+              <span>&pound;39</span>
+            </p>
+            <%= link_to 'Buy Now', '#', :class => "btn" %>
+          </div>
+          
+        </div>
+          
+      </div>
+    </section>
+
+    <section class="block sponsors">
+      <div class="wrapper">
+        <h1>Sponsors</h1>
+
+        <h2>Venue Sponsor</h2>
+        <%= link_to image_tag("http://placehold.it/300x150"), "#", :class => "sponsor-logo" %>
+
+        <h2>Gold Sponsors</h2>
+        <%= link_to image_tag("http://placehold.it/300x150"), "#", :class => "sponsor-logo" %>
+        <%= link_to image_tag("http://placehold.it/300x150"), "#", :class => "sponsor-logo" %>
+
+        <h2>Silver Sponsors</h2>
+        <%= link_to image_tag("http://placehold.it/300x150"), "#", :class => "sponsor-logo" %>
+        <%= link_to image_tag("http://placehold.it/300x150"), "#", :class => "sponsor-logo" %>
+
+        <h2>Bronze Sponsors</h2>
+        <%= link_to image_tag("http://placehold.it/300x150"), "#", :class => "sponsor-logo" %>
+        <%= link_to image_tag("http://placehold.it/300x150"), "#", :class => "sponsor-logo" %>
+
+        <div class="cta">
+          <%= link_to 'Sponsor Profiles', '#', :class => "btn outline alt" %>
+          <p>Interested in <%= link_to 'becoming a sponsor', '#' %>?</p>
+        </div>
+
+      </div>
+
+    </section>
+
+    <footer class="site-footer">
+      <div class="wrapper">
+        <p class="footer-heading">Bath Ruby proudly supports</p>
+        <%= link_to image_tag('save-the-children.png', "width" => "304", :height => "62"), 'http://www.savethechildren.org/' %>
+        <p class="charity-info">Registered Charity No. 213890 (England & Wales) and SC039570 (Scotland)</p>
+        <%= link_to '@bathruby', 'https://twitter.com/bathruby', :class => "twitter-link" %>
+        <p class="copy">Copyright &copy; Bath Ruby 2016 All Rights Reserved</p>
+      </div>
+    </footer>
+    <%= javascript_include_tag 'application' %>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDNcaE1Us-Jle846f697TbD4gPHVI2N6E8&callback=initMap"></script>
+
+
+  </body>
+
+</html>

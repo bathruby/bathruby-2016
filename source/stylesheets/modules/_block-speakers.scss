@@ -1,0 +1,46 @@
+// Speakers Block
+
+.block.speakers {
+  background: transparent;
+  color: $contrast;
+  a{
+    color: $contrast;
+    &:hover{color: $light;}
+  }
+
+  h2{
+    @include type-main-heading();
+    color: $light;
+  }
+}
+
+
+.speaker-list{
+  margin: 0;
+  padding: 0;
+  li {
+    @include list-style-none();
+    text-align: center;
+    display: block;
+
+    img{
+      display: block;
+      margin: 0 auto;
+    }
+
+    h3{
+      @include font-sans();
+      text-transform: uppercase;
+      @include font-size(20);
+      color: $light;
+    }
+
+    .twitter{
+      @include font-sans();
+      text-transform: uppercase;
+      @include font-size(12);
+      font-weight: 700;
+    }
+    
+  }
+}

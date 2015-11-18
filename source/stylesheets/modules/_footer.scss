@@ -1,0 +1,37 @@
+// Footer
+// ------------------------------------------------------------
+
+.site-footer{
+  text-align: center;
+  @include font-size(12);
+  color: $contrast-light;
+  background-color: $light;
+}
+
+.footer-heading{
+  color: $main;
+  @include font-sans;
+  font-weight: 700;
+}
+
+.twitter-link {
+  padding-left: 30px;
+  background: url(/images/icon-twitter.png) no-repeat 0 0;
+  background-size: 25px 20px;
+  line-height: 25px;
+  display: inline-block;
+  height: 25px;
+  @include respond-min($bp-tablet){
+    float: left;
+    display: block;
+  }
+}
+
+.copy{
+  @include respond-min($bp-tablet){
+    float: right;
+    margin: 0;
+    max-width: 170px;
+    text-align: right;
+  }
+}

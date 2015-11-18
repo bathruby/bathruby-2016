@@ -1,0 +1,10 @@
+// Map
+
+#map{
+  width: 100%;
+  height: 300px;
+  margin-bottom: 40px;
+  @include respond-min($bp-tablet){
+    height: 100vh;
+  }
+}
