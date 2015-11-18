@@ -15,16 +15,21 @@
   }
 }
 
+.releases{
+  @include clearfix();
+  display: block;
+  width: 100%;
+
+}
+
 .release{
   @include clearfix();
   display: block;
   margin: 0 0 40px 0;
-  max-width: 300px;
+  max-width: 320px;
   @include respond-min($bp-tablet){
-    float: left;
-    width: 30%;
-    margin: 0 5% 0 0;
-    &:nth-child(3n){margin-right: 0;}
+    @include span-columns(4);
+    @include omega(3n);
   }
 
 }
