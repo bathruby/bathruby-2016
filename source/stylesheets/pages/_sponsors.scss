@@ -47,7 +47,9 @@ body.sponsors{
     border-color: $border;
     color: $main;
     &:hover{
-      border-color: $contrast;
+      border-color: $main;
+      background-color: $main;
+      color: $light;
     }
   }
 
