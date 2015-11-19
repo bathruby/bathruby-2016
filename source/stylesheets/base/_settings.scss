@@ -46,6 +46,40 @@ $bp-desktop: 1024px;
  text-indent: -1000em;
 }
 
+@mixin underline($option) {
+  &:after{
+    content: "";
+    display: block;
+    width: 20px;
+    height: 2px;
+    margin: 20px 0;
+    @if $option == red {
+      background-color: $main;
+    } @else if $option == light-blue {
+      background-color: $sold-out;
+    } @else {
+      background-color: $contrast;
+    }
+  }
+}
+
+@mixin overline($option) {
+  &:before{
+    content: "";
+    display: block;
+    width: 20px;
+    height: 2px;
+    margin: 20px 0;
+    @if $option == red {
+      background-color: $main;
+    } @else if $option == light-blue {
+      background-color: $sold-out;
+    } @else {
+      background-color: $contrast;
+    }
+  }
+}
+
 @mixin omega-reset($nth) {
   &:nth-child(#{$nth}) { margin-right: flex-gutter(); }
   &:nth-child(#{$nth}+1) { clear: none }

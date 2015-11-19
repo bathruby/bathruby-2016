@@ -1,25 +1,17 @@
 // Information 
 
 .main-content .wrapper.info{
-  margin: 0 20%;
-
   @include respond-min($bp-desktop) {
-    margin: 0;
-
-    h1{
-      margin-left: 20%;
-    }
+    @include span-columns(6);
+    @include shift(2);
 
     .sub-nav{
-      width: 20%;
-      float: left;
-      margin-left: 20%;
+      @include span-columns(4);
       ul {margin-top: 0;}
     }
 
     .main{
-      width: 40%;
-      float: left;
+      @include span-columns(6);
     }
 
   }
@@ -32,10 +24,7 @@
   @include clearfix();
   .col{
     @include respond-min($bp-desktop) {
-      width: 50%;
-      float: left;
-      padding-left: 10%;
-      &:first-child{padding-left: 0;}
+      @include span-columns(5);
     }
   }
 }
@@ -45,18 +34,15 @@
 .food-drink {
   .col{
     @include respond-min($bp-desktop) {
-      width: 30%;
-      padding-left: 5%;
+      @include span-columns(3.3);
     }
   }
 }
 
 
+
 #accommodation,
 #food-drink,
-#accessibility {
-  background: url("/images/underline-blue.gif") no-repeat 0 0;
-  background-size: 20px 2px;
-  padding-top: 42px;
-  margin-top: 40px;
+#accessibility{
+  @include overline(default);
 }

@@ -1,8 +1,9 @@
 // Home
 // ------------------------------------------------------------
 
-body.index{
-  background: $main url("/images/home-bg.jpg") no-repeat top right;
+body.index,
+body.schedule {
+  background: $main url("/images/home-bg.jpg") no-repeat top right fixed;
   background-size: 400px auto;
 
   @include respond-min(500px) {
@@ -33,6 +34,10 @@ body.index{
 
 }
 
+body.schedule .main-nav ul li.nav-schedule a {
+  color: $contrast;
+}
+
 
 // Blocks
 // ------------------------------------------------------------
@@ -54,6 +59,8 @@ body.index{
 
   h1{color: $light;}
 
+  .hero-wrap {@include clearfix()};
+
   h2 span{color: $light;display: block;}
 
   a{
@@ -63,6 +70,7 @@ body.index{
 
   .scroll-arrow{
     display: none;
+
     @include respond-min($bp-tablet){
       display: block;
       margin: 80px auto 0 auto;
@@ -71,8 +79,23 @@ body.index{
       border: solid 2px rgba($light, 0.5);
       background: url("/images/scroll-arrow.png") no-repeat center center;
       background-size: 33px 11px;
+      animation-duration: 5s;
+      animation-name: fadeInOut;
+      animation-iteration-count: infinite;
     }
   }
+
+
+  @include respond-min($bp-desktop){
+    h2{
+      @include span-columns(5);
+    }
+    div.hero-content{
+      @include span-columns(5);
+      @include omega();
+    }
+  }
+
 }
 
 
@@ -96,7 +119,6 @@ body.index{
   background: $main url(/images/last-year-bg.jpg) no-repeat center center;
   background-size: cover;
   color: $light;
-  padding: 75px 0;
 
   // Text
   p{@include type-main-heading();}
@@ -121,7 +143,8 @@ body.index{
     height: 100vh;
     position: relative;
     .wrapper{
-      margin: 0 20%; 
+      @include span-columns(6);
+      @include shift(2); 
       position: relative;
       top: 50%;
       transform: translateY(-50%);
@@ -131,3 +154,13 @@ body.index{
 }
 
 
+
+
+// Animations
+
+@keyframes fadeInOut {
+  0% {opacity: 0;}
+  25% {opacity: 1;}
+  75% {opacity: 1;}
+  100% {opacity: 0;}
+}

@@ -2,10 +2,11 @@
 
 $( document ).ready(function() {
 
-
   var menuButton = $('a.menu'),
       mainNav = $('.main-nav'),
       body = $('body');
+
+  
 
   // Menu Click
   menuButton.click(function(e) {
@@ -19,6 +20,19 @@ $( document ).ready(function() {
       body.addClass("menu-open");
     }
   });
+
+
+
+  $('a').click(function(){
+    if (this.getAttribute("href").charAt(0) == "#") {
+      $('html, body').animate({
+          scrollTop: $( $.attr(this, 'href') ).offset().top
+      }, 500);
+      return false;
+    }
+  });
+
+
 
 }); //eo:doc ready
 

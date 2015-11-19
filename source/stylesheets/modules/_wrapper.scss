@@ -3,5 +3,6 @@
 
 .wrapper{
   @include clearfix();
-  margin: 0 10%;
+  @include span-columns(8);
+  @include shift(1);
 }

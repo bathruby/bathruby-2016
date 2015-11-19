@@ -1,10 +1,31 @@
 // Sponsors
 
-// Sponsors Page
-body.sponsors{
-  .wrapper h2{margin-left: 300px;}
+.main-content{
+  @include clearfix();
+  padding-top: 140px;
 }
 
+// Sponsors Page
+body.sponsors{
+
+  p.download{
+    @include overline(default);
+  }
+  
+  @include respond-min($bp-desktop){
+    .main-content .wrapper{
+      @include span-columns(6);
+      @include shift(2);
+      h2, p.download{@include shift(4);}
+      .media:before{@include shift(4);}
+    }
+  }
+
+  .site-footer{
+    padding-top: 50px;
+  }
+
+}
 
 
 // Sponsors Footer
@@ -31,7 +52,10 @@ body.sponsors{
   }
 
   @include respond-min($bp-desktop){
-    .wrapper {margin: 0 20%;}
+    .wrapper{
+      @include span-columns(6);
+      @include shift(2);
+    }
   }
 
 }

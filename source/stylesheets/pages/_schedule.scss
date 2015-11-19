@@ -1,0 +1,73 @@
+// Schedule
+
+body.schedule{
+  .main-content{
+    h1{color: $contrast; line-height: 1;}
+
+    a{
+      color: $contrast;
+      &:hover{color: $light;}
+    }
+
+    .wrapper{
+      @include respond-min($bp-desktop) {
+        @include span-columns(6);
+        @include shift(2);
+      }
+    }
+
+  }
+ 
+}
+
+
+// List
+
+ul.schedule{
+  @include list-style-none();
+
+  li{
+    margin-top: 30px;
+    @include clearfix();
+    @include overline(default);
+    &:first-child:before{display: none;}
+    .info{@include font-sans();text-align: center;}
+    .time{@include font-size(20);margin: 0;text-align: left;}
+    .duration{@include font-size(14);display: inline-block;margin-left: 10px;}
+    .title{@include font-size(20);color: $light;text-transform: uppercase;margin: 0;}
+    .twitter{
+      @include font-sans();
+      font-weight: 700;
+      text-transform: uppercase;
+      @include font-size(14);
+      text-align: center;
+      margin-bottom: 20px;
+      display: block;
+    }
+    .speaker-image{
+      margin: 0 auto;
+    }
+
+    p.speaker{
+      @include type-main-heading();
+      color: $light;
+      margin-bottom: 0.83em;
+    }
+
+
+    &.talk{
+      .time{margin-bottom: 20px;}
+    }
+
+    @include respond-min($bp-desktop) {
+      .info{
+        @include span-columns(4);
+        text-align: left;
+        .twitter{width: 142px;}
+      }
+      .detail{@include span-columns(6);}
+    }
+
+  }
+
+}

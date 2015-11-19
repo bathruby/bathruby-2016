@@ -53,3 +53,8 @@ img{
 // Table
 // ------------------------------------------------------------
 table {border-collapse: collapse;}
+
+
+// Highlight
+::selection {background: $main;}
+::-moz-selection {background: $main;}

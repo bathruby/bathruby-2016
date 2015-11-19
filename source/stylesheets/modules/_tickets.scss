@@ -9,9 +9,7 @@
   h1{color: $light;}
 
   h2{
-    background: url("/images/underline-red.gif") no-repeat left bottom;
-    background-size: 20px 2px;
-    padding-bottom: 17px;
+    @include underline(red);
   }
 }
 
@@ -33,7 +31,7 @@
     .cost, .cost span, h1, h2, .sold-out-cost{
       color: $sold-out;
     }
-    h2{background-image: url("/images/underline-light-blue.gif");}
+    h2{@include underline(light-blue);}
   }
 }
 

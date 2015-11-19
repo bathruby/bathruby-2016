@@ -2,10 +2,11 @@
 // ------------------------------------------------------------
 
 .site-footer{
+  @include clearfix();
+  background-color: $light;
   text-align: center;
   @include font-size(12);
   color: $contrast-light;
-  background-color: $light;
   padding-bottom: 50px; 
 }
 
