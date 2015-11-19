@@ -3,8 +3,7 @@
 
 .btn{
   display: inline-block;
-  padding: 0 16px;
-  height: 49px;
+  padding: 7px 18px;
   line-height: 47px;
   background: $main;
   border: solid 2px $main;
@@ -14,6 +13,7 @@
   @include font-size(20);
   @include font-sans;
   transition: color 0.2s, border 0.2s,  background 0.2s;
+  letter-spacing: 1px;
 
   &:hover{
     background: $light;

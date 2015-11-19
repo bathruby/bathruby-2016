@@ -5,15 +5,17 @@
   @include clearfix();
   background-color: $light;
   text-align: center;
-  @include font-size(12);
   color: $contrast-light;
-  padding-bottom: 50px; 
+  font-size: 12px;
+  padding-bottom: 50px;
 }
 
 .footer-heading{
   color: $main;
   @include font-sans;
   font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .charity-logo {

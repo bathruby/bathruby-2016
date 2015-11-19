@@ -125,18 +125,29 @@ body.schedule .main-nav ul li.nav-schedule a {
 
   // Link
   a{
-    padding-top: 134px;
-    display: block;
-    width: 124px;
     color: $light;
     text-transform: uppercase;
-    background: url("/images/play-video.png") no-repeat 0 0;
-    background-size: 124px;
     @include font-size(15);
     @include font-sans();
     font-weight: 700;
+    width: 124px;
+    display: block;
     text-align: center;
-    &:hover{color: $contrast;}
+
+    &:before{
+      content: "";
+      width: 120px;
+      height: 120px;
+      display: block;
+      border: solid 2px $main;
+      background: $contrast url("/images/play-video.png") no-repeat center center;
+      background-size: 39px 25px;
+      border-radius: 9999em;
+      transition: border-color 0.2s;
+      position: relative;
+      top: -10px;
+    }
+    &:hover:before{border-color: $light;}
   }
 
   @include respond-min($bp-desktop){
