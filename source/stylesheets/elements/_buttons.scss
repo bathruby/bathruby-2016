@@ -29,17 +29,7 @@
       background: $contrast;
       border-color: $contrast;
     }
-
-    &.alt{
-      border-color: $border;
-      color: $main;
-      &:hover{
-        background: $contrast;
-        border-color: $contrast;
-        color: $light;
-      }
-    }
-
+    
   }
 
 }

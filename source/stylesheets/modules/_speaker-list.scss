@@ -1,0 +1,70 @@
+// Speaker List
+
+.speaker-list{
+  @include list-style-none();
+  @include clearfix();
+
+  li {
+    text-align: center;
+    display: block;
+    margin-bottom: 45px;
+    
+    img{
+      display: block;
+      margin: 0 auto 15px auto;
+    }
+
+    h3{
+      @include font-sans();
+      text-transform: uppercase;
+      @include font-size(20);
+      color: $light;
+      margin-bottom: 0;
+    }
+
+    .twitter{
+      @include font-sans();
+      text-transform: uppercase;
+      @include font-size(12);
+      font-weight: 700;
+      margin-bottom: 20px; 
+      display: block;
+    }
+
+    a{
+      color: $contrast;
+      &:hover{color: $light;}
+    }
+    
+  }
+
+  @include respond-min($bp-tablet) {
+    margin-bottom: 100px;
+    li{
+      @include span-columns(4);
+      @include omega(3n);
+      position: relative;
+      &:nth-child(3n+1){
+        top: 100px;
+      }
+
+      &:nth-child(3n+2){
+        top: 50px;
+      }
+
+      // &:nth-child(3n+3){
+      //   background: green; 
+      // }
+    }
+  }
+
+  //   @include respond-min($bp-desktop) {
+  //   li{
+  //     @include omega-reset(3n);
+  //     @include span-columns(2);
+  //     @include omega(6n);
+  //   }
+  // }
+
+
+}

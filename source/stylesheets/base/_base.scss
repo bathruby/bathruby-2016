@@ -38,7 +38,10 @@ a img {border: none;}
 
 // List
 // ------------------------------------------------------------
-ul li {list-style-type:disc;}
+ul{
+  padding-left: 30px;
+  li {list-style-type:disc;}
+}
 
 // Images
 // ------------------------------------------------------------

@@ -17,21 +17,24 @@
 
 .releases{
   @include clearfix();
-  display: block;
-  width: 100%;
-
+  @include respond-min($bp-tablet){
+    margin: 0 auto;
+    width: 220px;
+  }
 }
 
 .release{
   @include clearfix();
   display: block;
-  margin: 0 0 40px 0;
-  max-width: 320px;
-  @include respond-min($bp-tablet){
-    @include span-columns(4);
-    @include omega(3n);
+  margin: 0 0 50px 0;
+  max-width: 220px;
+  
+  &.not-on-sale{
+    .cost, .cost span, h1, h2, .sold-out-cost{
+      color: $sold-out;
+    }
+    h2{background-image: url("/images/underline-light-blue.gif");}
   }
-
 }
 
 .cost{
@@ -45,7 +48,9 @@
   }
 }
 
-.sold-out{
+.sold-out-cost{
   @include type-main-heading();
+  margin-bottom: 0;
+  line-height: 1;
 }
 

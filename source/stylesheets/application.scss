@@ -9,16 +9,12 @@
 // Base
 @import "base/normalize";
 @import "base/settings";
-@import "grid-settings";
-
+@import "base/grid-settings";
 @import "base/typography";
 @import "base/base";
 
 // Elements
 @import "elements/buttons";
-
-// Layout
-@import "layout";
 
 // Modules
 @import "modules/header";
@@ -28,22 +24,13 @@
 @import "modules/map";
 @import "modules/subnav";
 @import "modules/media";
-
-
-
-// Blocks
-@import "modules/block";
-@import "modules/block-hero";
-@import "modules/block-speakers";
-@import "modules/block-tickets";
-@import "modules/block-last-year";
-@import "modules/block-sponsors";
+@import "modules/speaker-list";
+@import "modules/tickets";
 
 // Pages
-@import "modules/home";
-@import "modules/speakers";
-@import "modules/sponsors";
-
-
+@import "pages/home";
+@import "pages/speakers";
+@import "pages/sponsors";
+@import "pages/information";
 
 // Vendor

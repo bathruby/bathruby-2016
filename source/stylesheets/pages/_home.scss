@@ -1,0 +1,133 @@
+// Home
+// ------------------------------------------------------------
+
+body.index{
+  background: $main url("/images/home-bg.jpg") no-repeat top right;
+  background-size: 400px auto;
+
+  @include respond-min(500px) {
+    background-size: 768px auto;
+  }
+
+  @include respond-min(769px) {
+    background-image: url("/images/home-bg-desktop.jpg") no-repeat 0 0;
+    background-size: 1024px auto;
+  }
+
+  @include respond-min(1025px) {
+    background-size: 1200px auto;
+  }
+
+  @include respond-min(1200px) {
+    background-size: 100% auto;
+  }
+
+
+  // Header Colours
+  .logo{background-image: url("/images/logo-white.png");}
+  .menu{background-image: url("/images/menu-white.png");}
+  .main-nav li a {
+    color: $light;
+    &:hover{color: $contrast;}
+  }
+
+}
+
+
+// Blocks
+// ------------------------------------------------------------
+
+.block {
+  @include clearfix();
+  display: block;
+  padding: 75px 0 75px 0;
+  @include respond-min($bp-tablet){
+    padding: 100px 0 100px 0;
+  }
+}
+
+// Hero
+// ------------------------------------------------------------
+.block.hero{
+  background: transparent;
+  color: $contrast;
+
+  h1{color: $light;}
+
+  h2 span{color: $light;display: block;}
+
+  a{
+    color: $contrast;
+    &:hover{color: $light;}
+  }
+
+  .scroll-arrow{
+    display: none;
+    @include respond-min($bp-tablet){
+      display: block;
+      margin: 80px auto 0 auto;
+      @include size(62px);
+      border-radius: 62px;
+      border: solid 2px rgba($light, 0.5);
+      background: url("/images/scroll-arrow.png") no-repeat center center;
+      background-size: 33px 11px;
+    }
+  }
+}
+
+
+// Speakers Block
+// ------------------------------------------------------------
+.block.speakers {
+  background: transparent;
+  color: $contrast;
+
+  h2{
+    @include type-main-heading();
+    color: $light;
+  }
+}
+
+
+// Last Year
+// ------------------------------------------------------------
+
+.block.last-year{
+  background: $main url(/images/last-year-bg.jpg) no-repeat center center;
+  background-size: cover;
+  color: $light;
+  padding: 75px 0;
+
+  // Text
+  p{@include type-main-heading();}
+
+  // Link
+  a{
+    padding-top: 134px;
+    display: block;
+    width: 124px;
+    color: $light;
+    text-transform: uppercase;
+    background: url("/images/play-video.png") no-repeat 0 0;
+    background-size: 124px;
+    @include font-size(15);
+    @include font-sans();
+    font-weight: 700;
+    text-align: center;
+    &:hover{color: $contrast;}
+  }
+
+  @include respond-min($bp-desktop){
+    height: 100vh;
+    position: relative;
+    .wrapper{
+      margin: 0 20%; 
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+}
+
+

@@ -12,6 +12,7 @@ $main:#ed1b24;             // Red
 $contrast: #160c2e;        // Dark Blue
 $contrast-light: #c4c4c4;  // Lightest Grey
 $border: #e8e8e8;          // Light Grey
+$sold-out: #2d196c;        // Light Blue
 
 // Base Font Size
 $basefont: 14;
@@ -24,10 +25,12 @@ $bp-desktop: 1024px;
 // Mixins
 // ------------------------------------------------------------
 @mixin list_style_none {
-  background: none;
   padding-left: 0;
-  list-style-type: none;
-  list-style-position: outside;
+  margin-left: 0;
+  li{
+    padding-left: 0;
+    list-style-type: none;
+  }
 }
 
 @mixin font_size($size) {
@@ -43,12 +46,9 @@ $bp-desktop: 1024px;
  text-indent: -1000em;
 }
 
-@mixin clearfix {
-  &::after {
-    clear: both;
-    content: "";
-    display: table;
-  }
+@mixin omega-reset($nth) {
+  &:nth-child(#{$nth}) { margin-right: flex-gutter(); }
+  &:nth-child(#{$nth}+1) { clear: none }
 }
 
 // Media Query Setup

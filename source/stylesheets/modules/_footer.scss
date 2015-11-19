@@ -6,12 +6,22 @@
   @include font-size(12);
   color: $contrast-light;
   background-color: $light;
+  padding-bottom: 50px; 
 }
 
 .footer-heading{
   color: $main;
   @include font-sans;
   font-weight: 700;
+}
+
+.charity-logo {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.charity-info {
+  margin-bottom: 50px;
 }
 
 .twitter-link {

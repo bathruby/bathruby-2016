@@ -1,11 +1,10 @@
 // Sub Nav
 
-.sub-nav ul {
-  padding: 0;
-  margin: 0;
-  li {
+.sub-nav{
+  margin-bottom: 40px;
+  ul {
     @include list-style-none();
-    a{
+    li  a{
       text-transform: uppercase;
       @include font-size(20);
       @include font-sans();

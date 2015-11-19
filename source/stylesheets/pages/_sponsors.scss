@@ -1,0 +1,37 @@
+// Sponsors
+
+// Sponsors Page
+body.sponsors{
+  .wrapper h2{margin-left: 300px;}
+}
+
+
+
+// Sponsors Footer
+.block.sponsors {
+  background-color: $light;
+  text-align: center;
+  h1{text-align: left;}
+  h2{
+    border-bottom: solid 2px $border;
+    padding: 0 0 10px 0;
+    margin: 20px 0 40px 0;
+  }
+  .sponsor-logo{
+    display: inline-block;
+    margin: 0 0 40px 0;
+  }
+
+  .btn.outline{
+    border-color: $border;
+    color: $main;
+    &:hover{
+      border-color: $contrast;
+    }
+  }
+
+  @include respond-min($bp-desktop){
+    .wrapper {margin: 0 20%;}
+  }
+
+}

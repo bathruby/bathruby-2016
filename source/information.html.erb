@@ -1,10 +1,10 @@
-<div class="wrapper">
+<div class="main-content">
 
-  <h1>Information</h1>
+  <div class="wrapper info">
 
-  <div class="row intro">
+    <h1>Information</h1>
 
-    <nav class="col sub-nav">
+    <nav class="sub-nav">
       <ul>
         <li><%= link_to "Code of conduct", "#code-of-conduct" %></li>
         <li><%= link_to "Accessibility", "#accessibility" %></li>
@@ -15,7 +15,7 @@
       </ul>
     </nav>
 
-    <div class="col main">
+    <div class="main">
 
       <h2 id="code-of-conduct">Code of conduct</h2>
 
@@ -36,7 +36,7 @@
       <p>We expect participants to follow these rules at all conference venues and conference-related social events.</p>
 
 
-      <h2 id="Accessibility">Accessibility</h2>
+      <h2 id="accessibility">Accessibility</h2>
 
       <p>We're doing our best to ensure that Bath Ruby Conference is as inclusive as possible and this means the following:</p>
 
@@ -53,139 +53,134 @@
       <p>We will happily reserve you a ticket if it's not immediately clear whether necessary assistance is provided.</p>
 
     </div>
-      
-  </div>
-    
-</div>
-
-
-<div id="map">
-  
-</div>
-
-<div class="wrapper">
-
-  <h2 id-"travel">Travel</h2>
-
-  <div class="row travel">
-
-    <div class="col">
-
-      <h3>By Plane</h3>
-
-      <p>There are a number of international airports in the UK and your best bet for finding a cheap flight is by using a comparison site such as <%= link_to "Skyscanner", "http://www.skyscanner.com" %> or <%= link_to "KAYAK", "http://www.kayak.com/" %>. Below is a list of approximate travel times from various UK airports to Bath by train.</p>
-
-      <p>
-        Bristol Airport - 1 hr<br />
-        Heathrow Airport - 2 hrs 15 mins<br />
-        Birmingham Airport - 2 hr 20 mins<br />
-        Gatwick Airport - 3 hrs<br />
-        Stansted Airport - 3 hr 30 mins<br />
-        Manchester Airport - 3 hrs
-      </p>
-
-      <h3>By Automobile</h3>
-
-      <p>You can find information on <strong>bus</strong> times using this <%= link_to "Google Map", "https://goo.gl/maps/eHZ62" %>.</p>
-
-      <p>If you’re coming by car to the conference, we recommend using one of <%= link_to "Bath’s Park and Ride services", "http://visitbath.co.uk/travel-and-maps/bath-park-and-ride/" %>. However, there are also a few <%= link_to "long-stay car parks", "http://www.bathnes.gov.uk/services/parking-and-travel/car-parking/parking-bath/" %> in the city centre, with <%= link_to "Charlotte Street", "http://en.parkopedia.co.uk/parking/carpark/charlotte_street/ba1/bath/" %> being the closest to the venue.</p>
-
-      <p>There are several taxi firms in Bath, including <%= link_to "Abbey Taxis", "http://www.abbeytaxis.co.uk/" %> (+44 (0) 1225 44 44 44) and <%= link_to "V-Cars", "http://www.v-cars.com/" %> (+44 (0) 1225 46 46 46). There is also a taxi rank outside the train station.</p>
-      
-    </div>
-
-    <div class="col">
-      <h3>By Train</h3>
-
-      <p>Bath is well served by trains from all over the UK (and, via London, from Europe as well). The city’s main station is <%= link_to "Bath Spa", "http://www.thetrainline.com/stations/bath-spa" %> (about a 15 minute walk away from the venue) which has regular direct services to and from London, Bristol and South Wales.</p>
-
-      <p>You can look up train times and buy tickets on the <%= link_to "National Rail", "http://www.nationalrail.co.uk/" %> website or, if you’re travelling from outside the UK, we recommend using The Man in Seat 61’s excellent guide to <%= link_to "UK train travel", "http://seat61.com/UK-train-travel.htm" %>.</p>
-
-      <p>If you’re planning to travel by train from Europe then the <%= link_to "Eurostar", "http://www.eurostar.com/" %> website should have everything you need.</p>
-
-      <h3>By Bike</h3>
-
-      <p>If you’d like to cycle around Bath then you can sign up for<%= link_to "Nextbike", "http://www.nextbike.co.uk/en/bath/" %>. Hiring a Nextbike costs £1 for the first half an hour and they’re available at various locations around the city.</p>
-      
-    </div>
-
+              
   </div>
 
-  
 
-
-
-
-  <h2 id="accommodation">Accommodation</h2>
-
-  <div class="row accommodation">
-
-    <div class="col">
-    <h3>Money is no object</h3>
-    <p>
-      The Royal Crescent  £184 - £699<br />
-      The Gainsborough  £255 - £560<br />
-      Bath Spa Hotel  £160 - £370
-    </p>
-    </div>
-
-    <div class="col">
-      <h3>You get what you pay for</h3>
-      <p>
-        Francis Hotel  £119 - £169<br />
-        The Halcyon  £99 - £150
-      </p>
-    </div>
-
-    <div class="col">
-      <h3>On a budget</h3>
-      <p>
-        Premier Inn  £70 <br />
-        Travelodge  £56 <br />
-        Bath Backpackers Hostel  £13 - £23
-      </p>
-    </div>
+  <div id="map">
     
   </div>
 
+  <div class="wrapper">
 
-  <h2 id="food-drink">Food &amp; Drink</h2>
+    <h2 id-"travel">Travel</h2>
 
-  <div class="row food-drink">
+    <div class="travel">
 
-    <div class="col">
-      <h3>Coffee</h3>
-      <p>
-        Colonna & Smalls<br />
-        Society Café - High St<br />
-        Society Café - Kingsmead Sq<br />
-        Mokoko<br />
-        The Forum Coffee House
-      </p>
+      <div class="col">
+
+        <h3>By Plane</h3>
+
+        <p>There are a number of international airports in the UK and your best bet for finding a cheap flight is by using a comparison site such as <%= link_to "Skyscanner", "http://www.skyscanner.com" %> or <%= link_to "KAYAK", "http://www.kayak.com/" %>. Below is a list of approximate travel times from various UK airports to Bath by train.</p>
+
+        <p>
+          Bristol Airport - 1 hr<br />
+          Heathrow Airport - 2 hrs 15 mins<br />
+          Birmingham Airport - 2 hr 20 mins<br />
+          Gatwick Airport - 3 hrs<br />
+          Stansted Airport - 3 hr 30 mins<br />
+          Manchester Airport - 3 hrs
+        </p>
+
+        <h3>By Automobile</h3>
+
+        <p>You can find information on <strong>bus</strong> times using this <%= link_to "Google Map", "https://goo.gl/maps/eHZ62" %>.</p>
+
+        <p>If you’re coming by car to the conference, we recommend using one of <%= link_to "Bath’s Park and Ride services", "http://visitbath.co.uk/travel-and-maps/bath-park-and-ride/" %>. However, there are also a few <%= link_to "long-stay car parks", "http://www.bathnes.gov.uk/services/parking-and-travel/car-parking/parking-bath/" %> in the city centre, with <%= link_to "Charlotte Street", "http://en.parkopedia.co.uk/parking/carpark/charlotte_street/ba1/bath/" %> being the closest to the venue.</p>
+
+        <p>There are several taxi firms in Bath, including <%= link_to "Abbey Taxis", "http://www.abbeytaxis.co.uk/" %> (+44 (0) 1225 44 44 44) and <%= link_to "V-Cars", "http://www.v-cars.com/" %> (+44 (0) 1225 46 46 46). There is also a taxi rank outside the train station.</p>
+        
+      </div>
+
+      <div class="col">
+        <h3>By Train</h3>
+
+        <p>Bath is well served by trains from all over the UK (and, via London, from Europe as well). The city’s main station is <%= link_to "Bath Spa", "http://www.thetrainline.com/stations/bath-spa" %> (about a 15 minute walk away from the venue) which has regular direct services to and from London, Bristol and South Wales.</p>
+
+        <p>You can look up train times and buy tickets on the <%= link_to "National Rail", "http://www.nationalrail.co.uk/" %> website or, if you’re travelling from outside the UK, we recommend using The Man in Seat 61’s excellent guide to <%= link_to "UK train travel", "http://seat61.com/UK-train-travel.htm" %>.</p>
+
+        <p>If you’re planning to travel by train from Europe then the <%= link_to "Eurostar", "http://www.eurostar.com/" %> website should have everything you need.</p>
+
+        <h3>By Bike</h3>
+
+        <p>If you’d like to cycle around Bath then you can sign up for<%= link_to "Nextbike", "http://www.nextbike.co.uk/en/bath/" %>. Hiring a Nextbike costs £1 for the first half an hour and they’re available at various locations around the city.</p>
+        
+      </div>
+
     </div>
 
-    <div class="col">
-      <h3>Food</h3>
+    <h2 id="accommodation">Accommodation</h2>
+
+    <div class="accommodation">
+
+      <div class="col">
+      <h3>Money is no object</h3>
       <p>
-        Hall & Woodhouse<br />
-        The Whole Bagel<br />
-        Schwartz Bros Burgers<br />
-        Bonghy-Bo
+        <%= link_to "The Royal Crescent", "http://www.royalcrescent.co.uk/" %>&nbsp;&nbsp;£184 - £699<br />
+        <%= link_to "The Gainsborough", "http://www.thegainsboroughbathspa.co.uk/" %>&nbsp;&nbsp;£255 - £560<br />
+        <%= link_to "Bath Spa Hotel", "http://www.macdonaldhotels.co.uk/our-hotels/macdonald-bath-spa-hotel/" %>&nbsp;&nbsp;£160 - £370
       </p>
+      </div>
+
+      <div class="col">
+        <h3>You get what you pay for</h3>
+        <p>
+          <%= link_to "Francis Hotel", "http://francishotel.com/" %>&nbsp;&nbsp;£119 - £169<br />
+          <%= link_to "The Halcyon", "http://www.thehalcyon.com/the-halcyon/" %>&nbsp;&nbsp;£99 - £150
+        </p>
+      </div>
+
+      <div class="col">
+        <h3>On a budget</h3>
+        <p>
+          <%= link_to "Premier Inn", "http://www.premierinn.com/gb/en/hotels/england/somerset/bath/bath-city-centre.html" %>&nbsp;&nbsp;£70 <br />
+          <%= link_to "Travelodge", "https://www.travelodge.co.uk/hotels/75/Bath-Central-hotel" %>&nbsp;&nbsp;£56 <br />
+          <%= link_to "Bath Backpackers Hostel", "http://www.hostels.co.uk/bath.php" %>&nbsp;&nbsp;£13 - £23
+        </p>
+      </div>
+      
     </div>
 
-    <div class="col">
-      <h3>Drink</h3>
-      <p>
-        The West Gate<br />
-        The Raven (pies!)<br />
-        Graze (close to train)<br />
-        The Pig and Fiddle
-      </p>
+
+    <h2 id="food-drink">Food &amp; Drink</h2>
+
+    <div class="food-drink">
+
+      <div class="col">
+        <h3>Coffee</h3>
+        <p>
+          <%= link_to "Colonna & Smalls", "http://www.colonnaandsmalls.co.uk/" %><br />
+          <%= link_to "Society Café - High St", "http://www.society-cafe.com/" %><br />
+          <%= link_to "Society Café - Kingsmead Sq", "http://www.society-cafe.com/" %><br />
+          <%= link_to "Mokoko", "http://mokoko.biz/" %><br />
+          <%= link_to "The Forum Coffee House", "http://www.bathforum.co.uk/Groups/221224/Bath_Forum/Caf%C3%A9/Caf%C3%A9.aspx" %>
+        </p>
+      </div>
+
+      <div class="col">
+        <h3>Food</h3>
+        <p>
+          <%= link_to "Hall & Woodhouse", "http://hall-woodhousebath.co.uk/" %><br />
+          <%= link_to "The Whole Bagel", "http://www.thewholebagel.co.uk/" %><br />
+          <%= link_to "Schwartz Bros Burgers", "http://design407.wix.com/schwartzbrosbath" %><br />
+          <%= link_to "Bonghy-Bo", "http://www.bonghy-bo.co.uk/" %>
+        </p>
+      </div>
+
+      <div class="col">
+        <h3>Drink</h3>
+        <p>
+          <%= link_to "The West Gate", "http://www.westgate-bath.co.uk/" %><br />
+          <%= link_to "The Raven", "http://www.theravenofbath.co.uk/" %> (pies!)<br />
+          <%= link_to "Graze", "https://www.bathales.com/our-pubs/pid/graze-bath/" %> (close to train)<br />
+          <%= link_to "The Pig and Fiddle", "http://www.pigandfiddle.butcombe.com/" %>
+        </p>
+      </div>
+      
     </div>
-    
+
   </div>
-
+    
 </div>
 
 <%= partial "tickets" %>

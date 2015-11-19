@@ -55,13 +55,13 @@
 
 // Paragraphs
 p{
-  margin: 0 0 1em 0;
+  margin: 0 0 1.5em 0;
 }
 
 // Headings
 
-h1, h2{@include font-sans; margin: 0 0 0.83em 0;}
-h3, h4, h5, h6  {@include font-heavy; margin: 0 0 1em 0;}
+h1, h2{@include font-sans; margin: 0 0 1em 0;}
+h3, h4, h5, h6  {@include font-heavy; margin: 0 0 1.5em 0;}
 
 h1{
   @include type-main-heading();
