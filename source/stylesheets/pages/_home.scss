@@ -111,6 +111,12 @@ body.schedule .main-nav ul li.nav-schedule a {
     @include type-main-heading();
     color: $light;
   }
+
+
+  @include respond-min($bp-mega) {
+    .cta {margin-top: 200px;}
+  }
+
 }
 
 
@@ -162,14 +168,10 @@ body.schedule .main-nav ul li.nav-schedule a {
       transform: translateY(-50%);
     }
   }
-
+  
 }
 
-
-
-
 // Animations
-
 @keyframes fadeInOut {
   0% {opacity: 0;}
   25% {opacity: 1;}

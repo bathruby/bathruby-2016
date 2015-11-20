@@ -9,10 +9,14 @@
 
 .main-content,
 .block.hero,
-.block.speakers ,
 .block.sponsors,
-.block.tickets {
+.block.tickets,
+.block.speakers {
   @include respond-min($bp-desktop) {
     .wrapper{width: 60%;}
   }
+}
+
+.block.speakers .wrapper.speakers{
+  width: 80%;
 }

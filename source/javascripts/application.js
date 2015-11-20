@@ -1,12 +1,11 @@
 //= require "jquery"
 
+var menuButton = $('a.menu'),
+    mainNav = $('.main-nav'),
+    body = $('body'),
+    scrollHeight;
+
 $( document ).ready(function() {
-
-  var menuButton = $('a.menu'),
-      mainNav = $('.main-nav'),
-      body = $('body');
-
-  
 
   // Menu Click
   menuButton.click(function(e) {
@@ -42,6 +41,16 @@ $( document ).ready(function() {
 }); //eo:doc ready
 
 
+$(window).scroll(function () { 
+  scrollHeight = 200;
+  if( $(window).scrollTop() > scrollHeight ) {
+    $("body").addClass("scroll");
+  } else {
+    $("body").removeClass("scroll");
+  }
+})
+
+
 // Google Maps
 function initMap() {
     var venue = {lat: 51.386205, lng: -2.362845};
@@ -53,8 +62,6 @@ function initMap() {
       mapTypeControl: false,
       streetViewControl: false,
     });
-
-    // var image = '/images/marker.png';
 
     var image = {
       url: '/images/marker.png',
