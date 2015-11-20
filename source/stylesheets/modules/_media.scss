@@ -9,12 +9,15 @@
     max-width: 300px;
   }
 
-  @include respond-min($bp-desktop){
+  @include respond-min($bp-tablet){
     .sponsor-logo{
-      // @include span-columns(4, block-collapse);
+      width: 30%;
+      float: left;
+      margin-right: 5%;
     }
     p{
-      // @include span-columns(6, block-collapse);
+      width: 65%;
+      float: left;
     }
 
   }

@@ -18,8 +18,13 @@ $sold-out: #512dc1;        // Light Blue
 $basefont: 14;
 
 // Breakpoints
+$bp-lg-phone: 500px;
 $bp-tablet: 768px;
-$bp-desktop: 1024px; 
+$bp-gt-tablet: 769px;
+$bp-desktop: 1024px;
+$bp-gt-desktop: 1025px; 
+$bp-mega: 1200px; 
+
 
 
 // Mixins

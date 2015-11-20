@@ -1,6 +1,5 @@
 // Tickets
 // ------------------------------------------------------------
-
 .block.tickets{
   @include clearfix();
   background: $contrast;
@@ -15,9 +14,11 @@
 
 .releases{
   @include clearfix();
-  @include respond-min($bp-tablet){
-    margin: 0 auto;
-    width: 220px;
+  margin: 0 auto;
+  width: 220px;
+  @include respond-min($bp-desktop){
+    width: 100%;
+    margin: 0;
   }
 }
 
@@ -25,7 +26,6 @@
   @include clearfix();
   display: block;
   margin: 0 0 50px 0;
-  max-width: 220px;
   
   &.not-on-sale{
     .cost, .cost span, h1, h2, .sold-out-cost{
@@ -33,12 +33,21 @@
     }
     h2{@include underline(light-blue);}
   }
+
+  @include respond-min($bp-desktop){
+    float: left;
+    width: 33.3%;
+  }
+
+  .btn{margin-top: 20px;}
+
 }
 
 .cost{
   color: $main;
-  width: 50%;
   float: left;
+  width: 103px;
+  margin: 0;
   span{
     color: $light;
     display: block;
@@ -51,4 +60,3 @@
   margin-bottom: 0;
   line-height: 1;
 }
-

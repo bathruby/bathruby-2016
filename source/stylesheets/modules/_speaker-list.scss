@@ -49,8 +49,10 @@
     margin-bottom: 100px;
     margin-left: $gutter;
     li{
-      // @include span-columns(3.3, block-collapse);
-      // @include omega(3n);
+      width: 23.3%;
+      margin-left: 5%;
+      margin-right: 5%;
+      float: left;
       position: relative;
       
       &:nth-child(3n+1){
@@ -68,9 +70,6 @@
 
   //   @include respond-min($bp-desktop) {
   //   li{
-  //     @include omega-reset(3n);
-  //     @include span-columns(2);
-  //     @include omega(6n);
   //   }
   // }
 

@@ -2,16 +2,16 @@
 
 .main-content .wrapper.info{
   @include respond-min($bp-desktop) {
-    // @include span-columns(6, block-collapse);
-    // @include shift(2);
 
     .sub-nav{
-      // @include span-columns(4, block-collapse);
+      width: 35%;
+      float: left;
       ul {margin-top: 0;}
     }
 
     .main{
-      // @include span-columns(6, block-collapse);
+      width: 65%;
+      float: left;
     }
 
   }
@@ -19,27 +19,29 @@
 }
 
 .accommodation,
-.food-drink,
+.food-drink {
+  @include clearfix();
+  .col{
+    @include respond-min($bp-desktop) {
+      width: 30%;
+      margin-left: 5%;
+      float: left;
+      &:first-child{margin-left: 0;}
+    }
+  }
+}
+
 .travel {
   @include clearfix();
   .col{
     @include respond-min($bp-desktop) {
-      // @include span-columns(5, block-collapse);
+      width: 45%;
+      margin-left: 10%;
+      float: left;
+      &:first-child{margin-left: 0;}
     }
   }
 }
-
-
-.accommodation,
-.food-drink {
-  .col{
-    @include respond-min($bp-desktop) {
-      // @include span-columns(3.3, block-collapse);
-    }
-  }
-}
-
-
 
 #accommodation,
 #food-drink,

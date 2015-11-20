@@ -7,8 +7,12 @@
   margin: 0 auto;
 }
 
-.main-content .wrapper {
-  @include respond-min($bp-tablet) {
-    width: 60%;
+.main-content,
+.block.hero,
+.block.speakers ,
+.block.sponsors,
+.block.tickets {
+  @include respond-min($bp-desktop) {
+    .wrapper{width: 60%;}
   }
 }

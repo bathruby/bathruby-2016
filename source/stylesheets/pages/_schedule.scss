@@ -9,13 +9,6 @@ body.schedule{
       &:hover{color: $light;}
     }
 
-    .wrapper{
-      @include respond-min($bp-desktop) {
-        // @include span-columns(6, block-collapse);
-        // @include shift(2);
-      }
-    }
-
   }
  
 }
@@ -59,14 +52,16 @@ ul.schedule{
       .time{margin-bottom: 20px;}
     }
 
-    @include respond-min($bp-desktop) {
+    @include respond-min($bp-tablet) {
       .info{
-        // @include span-columns(4, block-collapse);
+        width: 35%;
         text-align: left;
+        float: left;
         .twitter{width: 142px;}
       }
       .detail{
-      //@include span-columns(6, block-collapse);
+        width: 65%;
+        float: left;
       }
     }
 

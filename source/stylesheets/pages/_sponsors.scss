@@ -12,15 +12,10 @@ body.sponsors{
     @include overline(default);
   }
   
-  @include respond-min($bp-desktop){
+  @include respond-min($bp-tablet){
     .main-content .wrapper{
-      // @include span-columns(6, block-collapse);
-      // @include shift(2);
-      h2, p.download{
-        // @include shift(4);
-      }
-      .media:before{
-        // @include shift(4);
+      h2, p.download, .media:before{
+        margin-left: 35%;
       }
     }
   }
@@ -54,13 +49,6 @@ body.sponsors{
       border-color: $main;
       background-color: $main;
       color: $light;
-    }
-  }
-
-  @include respond-min($bp-desktop){
-    .wrapper{
-      // @include span-columns(6, block-collapse);
-      // @include shift(2);
     }
   }
 
