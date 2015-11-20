@@ -6,8 +6,10 @@
   display: block;
   clear: both;
   p{
-    @include font-size(12);
+    @include font-italic();
+    font-size: 12px;
     margin: 15px 0 0 0;
     padding: 0;
+    a{@include font-heavy-italic();}
   }
 }

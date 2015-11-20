@@ -12,6 +12,15 @@
        url('/fonts/2FB326_0_0.ttf') format('truetype');
 }
 
+@font-face {font-family: 'CaeciliaLTPro-56Italic';
+  src: url('/fonts/2FBC23_1_0.eot');
+  src: url('/fonts/2FBC23_1_0.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/2FBC23_1_0.woff2') format('woff2'),
+       url('/fonts/2FBC23_1_0.woff') format('woff'),
+       url('/fonts/2FBC23_1_0.ttf') format('truetype');
+}
+
+
 @font-face {font-family: 'CaeciliaLTPro-85Heavy';
   src: url('/fonts/2FB326_1_0.eot');
   src: url('/fonts/2FB326_1_0.eot?#iefix') format('embedded-opentype'),
@@ -21,6 +30,14 @@
 }
 
 
+@font-face {font-family: 'CaeciliaLTPro-86HeavyItalic';
+  src: url('/fonts/2FBC23_0_0.eot');
+  src: url('/fonts/2FBC23_0_0.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/2FBC23_0_0.woff2') format('woff2'),
+       url('/fonts/2FBC23_0_0.woff') format('woff'),
+       url('/fonts/2FBC23_0_0.ttf') format('truetype');
+}
+ 
 // Type Mixins
 @mixin font-sans{
   font-family: 'Source Sans Pro', Arial,"Helvetica Neue",Helvetica,sans-serif;
@@ -34,8 +51,21 @@
   font-style: normal;
 }
 
+@mixin font-italic{
+  font-family: 'CaeciliaLTPro-56Italic', 'Lucida Bright', Georgia, serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 @mixin font-heavy{
   font-family: 'CaeciliaLTPro-85Heavy', 'Lucida Bright', Georgia, serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
+@mixin font-heavy-italic{
+  font-family: 'CaeciliaLTPro-86HeavyItalic', 'Lucida Bright', Georgia, serif;
   font-weight: normal;
   font-style: normal;
 }

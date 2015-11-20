@@ -23,7 +23,7 @@
       letter-spacing: 1px;
     }
 
-    .twitter{
+    a.twitter{
       @include font-sans();
       text-transform: uppercase;
       @include font-size(12);
@@ -32,7 +32,13 @@
       display: block;
     }
 
+    p{
+      font-size: 12px;
+      @include font-italic();
+    }
+
     a{
+      @include font-heavy-italic();
       color: $contrast;
       &:hover{color: $light;}
     }
@@ -56,7 +62,6 @@
       }
 
       // &:nth-child(3n+3){
-      //   background: green; 
       // }
     }
   }
