@@ -42,12 +42,19 @@ $( document ).ready(function() {
 
 
 $(window).scroll(function () { 
+  
   scrollHeight = 200;
   if( $(window).scrollTop() > scrollHeight ) {
     $("body").addClass("scroll");
   } else {
     $("body").removeClass("scroll");
   }
+
+
+  // $('.speaker-list li').css({
+  //   'top' : -($(this).scrollTop()/6)+"px"
+  // });
+
 })
 
 
