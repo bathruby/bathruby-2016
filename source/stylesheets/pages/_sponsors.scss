@@ -14,10 +14,14 @@ body.sponsors{
   
   @include respond-min($bp-desktop){
     .main-content .wrapper{
-      @include span-columns(6);
-      @include shift(2);
-      h2, p.download{@include shift(4);}
-      .media:before{@include shift(4);}
+      // @include span-columns(6, block-collapse);
+      // @include shift(2);
+      h2, p.download{
+        // @include shift(4);
+      }
+      .media:before{
+        // @include shift(4);
+      }
     }
   }
 
@@ -55,8 +59,8 @@ body.sponsors{
 
   @include respond-min($bp-desktop){
     .wrapper{
-      @include span-columns(6);
-      @include shift(2);
+      // @include span-columns(6, block-collapse);
+      // @include shift(2);
     }
   }
 

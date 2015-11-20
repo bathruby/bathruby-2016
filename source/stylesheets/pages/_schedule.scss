@@ -11,8 +11,8 @@ body.schedule{
 
     .wrapper{
       @include respond-min($bp-desktop) {
-        @include span-columns(6);
-        @include shift(2);
+        // @include span-columns(6, block-collapse);
+        // @include shift(2);
       }
     }
 
@@ -61,11 +61,13 @@ ul.schedule{
 
     @include respond-min($bp-desktop) {
       .info{
-        @include span-columns(4);
+        // @include span-columns(4, block-collapse);
         text-align: left;
         .twitter{width: 142px;}
       }
-      .detail{@include span-columns(6);}
+      .detail{
+      //@include span-columns(6, block-collapse);
+      }
     }
 
   }

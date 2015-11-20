@@ -3,6 +3,12 @@
 
 .wrapper{
   @include clearfix();
-  @include span-columns(8);
-  @include shift(1);
+  width: 80%;
+  margin: 0 auto;
+}
+
+.main-content .wrapper {
+  @include respond-min($bp-tablet) {
+    width: 60%;
+  }
 }

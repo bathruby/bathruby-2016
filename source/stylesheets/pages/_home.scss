@@ -88,11 +88,11 @@ body.schedule .main-nav ul li.nav-schedule a {
 
   @include respond-min($bp-desktop){
     h2{
-      @include span-columns(5);
+      // @include span-columns(5);
     }
     div.hero-content{
-      @include span-columns(5);
-      @include omega();
+      // @include span-columns(5);
+      // @include omega();
     }
   }
 
@@ -154,8 +154,8 @@ body.schedule .main-nav ul li.nav-schedule a {
     height: 100vh;
     position: relative;
     .wrapper{
-      @include span-columns(6);
-      @include shift(2); 
+      // @include span-columns(6, block-collapse);
+      // @include shift(2); 
       position: relative;
       top: 50%;
       transform: translateY(-50%);

@@ -2,16 +2,16 @@
 
 .main-content .wrapper.info{
   @include respond-min($bp-desktop) {
-    @include span-columns(6);
-    @include shift(2);
+    // @include span-columns(6, block-collapse);
+    // @include shift(2);
 
     .sub-nav{
-      @include span-columns(4);
+      // @include span-columns(4, block-collapse);
       ul {margin-top: 0;}
     }
 
     .main{
-      @include span-columns(6);
+      // @include span-columns(6, block-collapse);
     }
 
   }
@@ -24,7 +24,7 @@
   @include clearfix();
   .col{
     @include respond-min($bp-desktop) {
-      @include span-columns(5);
+      // @include span-columns(5, block-collapse);
     }
   }
 }
@@ -34,7 +34,7 @@
 .food-drink {
   .col{
     @include respond-min($bp-desktop) {
-      @include span-columns(3.3);
+      // @include span-columns(3.3, block-collapse);
     }
   }
 }

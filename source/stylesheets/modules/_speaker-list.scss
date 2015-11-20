@@ -49,8 +49,8 @@
     margin-bottom: 100px;
     margin-left: $gutter;
     li{
-      @include span-columns(3.3);
-      @include omega(3n);
+      // @include span-columns(3.3, block-collapse);
+      // @include omega(3n);
       position: relative;
       
       &:nth-child(3n+1){

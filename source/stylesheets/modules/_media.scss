@@ -11,10 +11,10 @@
 
   @include respond-min($bp-desktop){
     .sponsor-logo{
-      @include span-columns(4);
+      // @include span-columns(4, block-collapse);
     }
     p{
-      @include span-columns(6);
+      // @include span-columns(6, block-collapse);
     }
 
   }

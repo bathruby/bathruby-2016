@@ -22,7 +22,7 @@ $( document ).ready(function() {
   });
 
 
-
+  // Scroll Links
   $('a').click(function(){
     if (this.getAttribute("href").charAt(0) == "#") {
       $('html, body').animate({
@@ -32,7 +32,12 @@ $( document ).ready(function() {
     }
   });
 
-
+  // Mobile Ticket Links
+  $(".main-nav ul li.nav-tickets a").click(function(e) {
+    e.preventDefault();
+    mainNav.fadeOut();
+    body.removeClass("menu-open");
+  });
 
 }); //eo:doc ready
 
