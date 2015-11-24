@@ -113,9 +113,9 @@ body.schedule .main-nav ul li.nav-schedule a {
   }
 
 
-  @include respond-min($bp-mega) {
-    .cta {margin-top: 200px;}
-  }
+  // @include respond-min($bp-mega) {
+  //   .cta {margin-top: 200px;}
+  // }
 
 }
 

@@ -50,10 +50,20 @@ $(window).scroll(function () {
     $("body").removeClass("scroll");
   }
 
+  scrollHeight = 250;
+  if( $(window).scrollTop() > scrollHeight ) {
+    $("body").addClass("scroll-two");
+  } else {
+    $("body").removeClass("scroll-two");
+  }
 
-  // $('.speaker-list li').css({
-  //   'top' : -($(this).scrollTop()/6)+"px"
-  // });
+
+  if ($(window).width() > 768 ) {
+    $('.speaker-list li').css("transform", "translateY(-" + ($(window).scrollTop()/7) + "px");
+    console.log($(window).scrollTop());
+  }
+
+
 
 })
 
@@ -77,7 +87,6 @@ function initMap() {
       origin: new google.maps.Point(0, 0),
       anchor: new google.maps.Point(33, 45)
     };
-
 
     var marker = new google.maps.Marker({
       position: venue,
