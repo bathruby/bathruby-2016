@@ -59,7 +59,7 @@ $(window).scroll(function () {
 
 
   if ($(window).width() > 768 ) {
-    $('.speaker-list li').css("transform", "translateY(-" + ($(window).scrollTop()/7) + "px");
+    $('.speaker-list li').css("transform", "translateY(-" + ($(window).scrollTop()/5) + "px");
     console.log($(window).scrollTop());
   }
 

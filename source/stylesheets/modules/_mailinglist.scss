@@ -1,0 +1,63 @@
+// Mailinlist
+
+#mc_embed_signup{
+  text-align: center;
+  color: $main;
+  
+  p{
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    @include font-size(12);
+    @include font-sans();
+    font-weight: 700;
+  }
+
+  #mc_embed_signup_scroll{
+    position: relative;
+    max-width: 350px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  label{display: none;}
+
+  input[type="email"]{
+    background: $light;
+    border: 0;
+    border-radius: 5px;
+    width: 100%;
+    padding: 0 40px 0 15px;
+    @include font-size(14);
+    color: $contrast;
+    height: 40px;
+    line-height: 40px;
+  }
+
+  input[type="submit"]{
+    @include image-replacement();
+    border: 0;
+    width: 8.5px;
+    height: 23px;
+    background: url("/images/submit.png") no-repeat 0 0;
+    background-size: 8.5px 46px;
+    position: absolute;
+    top: 9px;
+    right: 10px;
+    &:hover{background-position: 0 -23px;}
+  }
+
+}
+
+::-webkit-input-placeholder {
+   color: $contrast-light;
+}
+:-moz-placeholder {
+   color: $contrast-light;  
+}
+::-moz-placeholder { 
+   color: $contrast-light;  
+}
+:-ms-input-placeholder {  
+   color: $contrast-light;  
+}
