@@ -9,6 +9,10 @@ var menuButton = $('a.menu'),
 
 $( document ).ready(function() {
 
+  // Copy Header for scroll
+
+  $(".site-header").clone().appendTo('body').addClass("scroll-header").removeClass("site-header");
+
   // Menu Click
   menuButton.click(function(e) {
     e.preventDefault();
@@ -40,36 +44,27 @@ $( document ).ready(function() {
     body.removeClass("menu-open");
   });
 
+
+
+  $(window).scroll(function () { 
+    
+    scrollHeight = 150;
+    if( $(window).scrollTop() > scrollHeight ) {
+      $("body").addClass("scroll");
+    } else {
+      $("body").removeClass("scroll");
+    }
+
+    if ($(window).width() > 768 ) {
+      windowScroll = $(window).scrollTop();
+      $('.speaker-list').css("transform", "translateY(-" + (windowScroll/5) + "px");
+      $('.block.speakers .cta').css("transform", "translateY(-" + (windowScroll/15) + "px");
+    }
+
+  });
+
 }); //eo:doc ready
 
-
-$(window).scroll(function () { 
-  
-  scrollHeight = 200;
-  if( $(window).scrollTop() > scrollHeight ) {
-    $("body").addClass("scroll");
-  } else {
-    $("body").removeClass("scroll");
-  }
-
-  scrollHeight = 250;
-  if( $(window).scrollTop() > scrollHeight ) {
-    $("body").addClass("scroll-two");
-  } else {
-    $("body").removeClass("scroll-two");
-  }
-
-
-  if ($(window).width() > 768 ) {
-    windowScroll = $(window).scrollTop();
-    $('.speaker-list').css("transform", "translateY(-" + (windowScroll/5) + "px");
-    $('.block.speakers .cta').css("transform", "translateY(-" + (windowScroll/15) + "px");
-  }
-
-
-
-
-});
 
 // Google Maps
 function initMap() {

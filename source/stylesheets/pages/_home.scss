@@ -18,19 +18,32 @@ body.schedule {
     background-size: 1200px auto;
   }
 
-  @include respond-min($bp-mega) {
-    background-size: 100% auto;
-  }
-
-
   // Header Colours
-  .logo{background-image: url("/images/logo-white.png");}
-  .menu{background-image: url("/images/menu-white.png");}
-  .main-nav li a {
+  .site-header a.logo{background-image: url("/images/logo-white.png");}
+  .site-header .menu{background-image: url("/images/menu-white.png");}
+  .site-header .main-nav li a {
     color: $light;
     &:hover{color: $contrast;}
   }
 
+}
+
+
+body {
+  animation-duration: 1s;
+  animation-name: bgsize;
+}
+
+@keyframes bgsize {
+  from {
+    background-size: 900px auto;
+    background-position: top right;
+  }
+
+  to {
+    background-position: -80px right;
+    background-size: 1200px auto;
+  }
 }
 
 body.schedule .main-nav ul li.nav-schedule a {

@@ -112,51 +112,44 @@ body.tickets .main-nav ul li.nav-tickets a {
   }
 }
 
-
-
 // Scroll Menu
-body.scroll .site-header {
-  @include respond-min($bp-tablet){
-    transition: height 0.5s, top 0.5s;
-    width: 100%;
+.scroll-header {
+  transition: height 0.5s, transform 0.5s;
+  width: 100%;
+  height: 50px;
+  background: $light;
+  position: fixed;
+  left: 0;
+  top: 0; 
+  padding: 0;
+  z-index: 999;
+  transform: translateY(-50px);
+
+  .menu{background-image: url("/images/menu-red.png");}
+
+  .main-nav li a {
+    color: $main;
+    &:hover{color: $contrast;}
+  }
+
+  a.logo{
+    background: url("/images/logo-small.png") no-repeat 0 16px;
+    background-size: 33px 20px;
+    text-indent: 0;
+    @include font-sans;
+    color: $contrast;
+    text-transform: uppercase;
+    display: inline-block;
+    width: auto;
+    line-height: 50px;
+    padding-left: 43px;
     height: 50px;
-    background: $light;
-    position: fixed;
-    top: 0;
-    left: 0;
-    padding: 0;
-    z-index: 999;
-    top: -50px;
-
-    .menu{background-image: url("/images/menu-red.png");}
-
-    .main-nav li a {
-      color: $main;
-      &:hover{color: $contrast;}
-    }
-
-    a.logo{
-      background: url("/images/logo-small.png") no-repeat 0 16px;
-      background-size: 33px 20px;
-      text-indent: 0;
-      @include font-sans;
-      color: $contrast;
-      text-transform: uppercase;
-      display: inline-block;
-      width: auto;
-      line-height: 50px;
-      padding-left: 43px;
-      height: 50px;
-    }
   }
 }
 
-body.scroll-two{
-  .site-header{top: 0px;}
-}
+body.scroll .scroll-header{transform: translateY(0);}
 
-
-body.scroll.menu-open .site-header{
+body.scroll.menu-open .scroll-header{
   height: 100%;
   ul li a{color: $light;}
   .menu{background-image: url("/images/menu-white.png");}
