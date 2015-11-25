@@ -47,7 +47,7 @@
   }
 
   @include respond-min($bp-tablet) {
-    margin: 200px 0 0 0;
+    margin: 100px 0 100px 0;
     li{
       width: 23.3%;
       margin-left: 5%;
