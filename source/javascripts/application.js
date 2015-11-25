@@ -43,7 +43,6 @@ $( document ).ready(function() {
 }); //eo:doc ready
 
 
-
 $(window).scroll(function () { 
   
   scrollHeight = 200;
@@ -62,9 +61,12 @@ $(window).scroll(function () {
 
 
   if ($(window).width() > 768 ) {
-    $('.speaker-list li').css("transform", "translateY(-" + ($(window).scrollTop()/5) + "px");
-    $('.block.speakers .cta').css("transform", "translateY(-" + ($(window).scrollTop()/20) + "px");
+    windowScroll = $(window).scrollTop();
+    $('.speaker-list').css("transform", "translateY(-" + (windowScroll/5) + "px");
+    $('.block.speakers .cta').css("transform", "translateY(-" + (windowScroll/15) + "px");
   }
+
+
 
 
 });

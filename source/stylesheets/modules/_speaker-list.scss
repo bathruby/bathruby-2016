@@ -3,6 +3,7 @@
 .speaker-list{
   @include list-style-none();
   @include clearfix();
+  transition: transform 0.1s;
 
   li {
     text-align: center;
