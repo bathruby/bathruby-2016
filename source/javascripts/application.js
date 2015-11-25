@@ -3,7 +3,9 @@
 var menuButton = $('a.menu'),
     mainNav = $('.main-nav'),
     body = $('body'),
-    scrollHeight;
+    scrollHeight,
+    tickets = $('#tickets'),
+    ticketsDist;
 
 $( document ).ready(function() {
 
@@ -41,6 +43,7 @@ $( document ).ready(function() {
 }); //eo:doc ready
 
 
+
 $(window).scroll(function () { 
   
   scrollHeight = 200;
@@ -60,42 +63,41 @@ $(window).scroll(function () {
 
   if ($(window).width() > 768 ) {
     $('.speaker-list li').css("transform", "translateY(-" + ($(window).scrollTop()/5) + "px");
-    console.log($(window).scrollTop());
+    $('.block.speakers .cta').css("transform", "translateY(-" + ($(window).scrollTop()/20) + "px");
   }
 
 
-
-})
-
+});
 
 // Google Maps
 function initMap() {
-    var venue = {lat: 51.386205, lng: -2.362845};
 
-    var map = new google.maps.Map(document.getElementById('map'), {
-      zoom: 15,
-      center: venue,
-      scrollwheel: false,
-      mapTypeControl: false,
-      streetViewControl: false,
-    });
+  var venue = {lat: 51.386205, lng: -2.362845};
 
-    var image = {
-      url: '/images/marker.png',
-      size: new google.maps.Size(66, 45),
-      scaledSize: new google.maps.Size(66, 45),
-      origin: new google.maps.Point(0, 0),
-      anchor: new google.maps.Point(33, 45)
-    };
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 15,
+    center: venue,
+    scrollwheel: false,
+    mapTypeControl: false,
+    streetViewControl: false,
+  });
 
-    var marker = new google.maps.Marker({
-      position: venue,
-      map: map,
-      animation: google.maps.Animation.DROP,
-      icon: image
-    });
+  var image = {
+    url: '/images/marker.png',
+    size: new google.maps.Size(66, 45),
+    scaledSize: new google.maps.Size(66, 45),
+    origin: new google.maps.Point(0, 0),
+    anchor: new google.maps.Point(33, 45)
+  };
 
-    google.maps.event.addDomListener(window, 'resize', function() {
-      map.setCenter(venue);
-    });
-  }
+  var marker = new google.maps.Marker({
+    position: venue,
+    map: map,
+    animation: google.maps.Animation.DROP,
+    icon: image
+  });
+
+  google.maps.event.addDomListener(window, 'resize', function() {
+    map.setCenter(venue);
+  });
+}
