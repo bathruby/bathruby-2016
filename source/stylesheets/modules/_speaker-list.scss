@@ -47,7 +47,7 @@
   }
 
   @include respond-min($bp-tablet) {
-    margin: 100px 0 100px 0;
+    margin: 200px 0 0 0;
     li{
       width: 23.3%;
       margin-left: 5%;
@@ -60,6 +60,7 @@
   }
 
   @include respond-min($bp-mega) {
+    margin: 100px 0 100px 0;
     li{
       width: 16.66%;
       margin-left: 0%;
@@ -73,5 +74,11 @@
     }
   }
 
+}
 
+
+@media (max-width: $bp-tablet) {
+  .speaker-list{
+    transform: translate3d(0, 0, 0) !important;
+  }
 }

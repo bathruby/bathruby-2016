@@ -1,41 +1,45 @@
 <!doctype html>
-<html>
+<html class="no-js">
   <head>
     <meta charset="utf-8">
     <title>Bath Ruby Conference - 11th March 2015</title>
     <%= stylesheet_link_tag "application" %>
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
+    <%= javascript_include_tag 'modenizer' %>
   </head>
 
   <body class="<%= page_classes %>">
-    <header class="site-header">
-      <div class="wrapper">
-        <%= link_to 'Bath Ruby Conference 2016', '/', :class => "logo" %>
-        <nav class="main-nav">
-          <ul>
-            <li class="nav-home"><%= link_to 'Home', '/' %></li>
-            <li class="nav-schedule"><%= link_to 'Schedule', '/schedule' %></li>
-            <li class="nav-information"><%= link_to 'Information', '/information' %></li>
-            <li class="nav-sponsors"><%= link_to 'Sponsors', '/sponsors' %></li>
-            <li class="nav-tickets"><%= link_to 'Tickets', '#tickets' %></li>
-          </ul>
-        </nav>
-        <a href="#" class="menu">Menu</a>
-      </div>
-    </header>
+    <div class="page">
 
-    <%= yield %>
+      <header class="site-header">
+        <div class="wrapper">
+          <%= link_to 'Bath Ruby Conference 2016', '/', :class => "logo" %>
+          <nav class="main-nav">
+            <ul>
+              <li class="nav-home"><%= link_to 'Home', '/' %></li>
+              <li class="nav-schedule"><%= link_to 'Schedule', '/schedule' %></li>
+              <li class="nav-information"><%= link_to 'Information', '/information' %></li>
+              <li class="nav-sponsors"><%= link_to 'Sponsors', '/sponsors' %></li>
+              <li class="nav-tickets"><%= link_to 'Tickets', '#tickets' %></li>
+            </ul>
+          </nav>
+          <a href="#" class="menu">Menu</a>
+        </div>
+      </header>
 
-    <footer class="site-footer">
-      <div class="wrapper">
-        <p class="footer-heading">Bath Ruby proudly supports</p>
-        <%= link_to image_tag('save-the-children.png', "width" => "304", :height => "62"), 'http://www.savethechildren.org/', :class => "charity-logo" %>
-        <p class="charity-info">Registered Charity No. 213890 (England & Wales) and SC039570 (Scotland)</p>
-        <%= link_to '@bathruby', 'https://twitter.com/bathruby', :class => "twitter-link" %>
-        <p class="copy">Copyright &copy; Bath Ruby 2016 All Rights Reserved</p>
-      </div>
-    </footer>
+      <%= yield %>
 
+      <footer class="site-footer">
+        <div class="wrapper">
+          <p class="footer-heading">Bath Ruby proudly supports</p>
+          <%= link_to image_tag('save-the-children.png', "width" => "304", :height => "62"), 'http://www.savethechildren.org/', :class => "charity-logo" %>
+          <p class="charity-info">Registered Charity No. 213890 (England & Wales) and SC039570 (Scotland)</p>
+          <%= link_to '@bathruby', 'https://twitter.com/bathruby', :class => "twitter-link" %>
+          <p class="copy">Copyright &copy; Bath Ruby 2016 All Rights Reserved</p>
+        </div>
+      </footer>
+
+    </div>
     <%= javascript_include_tag 'application' %>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDNcaE1Us-Jle846f697TbD4gPHVI2N6E8&callback=initMap"></script>
 
