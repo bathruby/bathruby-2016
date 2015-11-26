@@ -34,6 +34,7 @@
   position: relative;
   z-index: 20;
   top: 20px;
+  cursor: pointer;
   @include respond-min($bp-desktop){
     display: none;
   }
@@ -148,10 +149,3 @@ body.tickets .main-nav ul li.nav-tickets a {
 }
 
 body.scroll .scroll-header{transform: translate3d(0, 0, 0);}
-
-body.scroll.menu-open .scroll-header{
-  height: 100%;
-  ul li a{color: $light;}
-  .menu{background-image: url("/images/menu-white.png");}
-  a.logo{color: $light;background-image: url("/images/logo-small-white.png");}
-}

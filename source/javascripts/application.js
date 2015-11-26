@@ -1,7 +1,7 @@
 //= require "jquery"
 
-var menuButton = $('a.menu'),
-    mainNav = $('.main-nav'),
+var menuButton = $('.menu'),
+    mainNav = $('.site-header .main-nav'),
     body = $('body'),
     scrollHeight,
     tickets = $('#tickets'),
@@ -14,9 +14,8 @@ $( document ).ready(function() {
   $(".site-header").clone().appendTo('body').addClass("scroll-header").removeClass("site-header");
 
   // Menu Click
-  menuButton.click(function(e) {
+  $( "body" ).delegate( ".menu", "click", function(e) {
     e.preventDefault();
-
     if (body.hasClass("menu-open")){
       mainNav.fadeOut();
       body.removeClass("menu-open");
@@ -25,7 +24,6 @@ $( document ).ready(function() {
       body.addClass("menu-open");
     }
   });
-
 
   // Scroll Links
   $('a').click(function(){
