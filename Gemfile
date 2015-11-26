@@ -19,3 +19,6 @@ gem 'neat'
 
 # Servers
 gem 'rack-contrib'
+
+#Minify HTML
+gem 'middleman-minify-html'

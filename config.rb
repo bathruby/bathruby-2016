@@ -15,6 +15,7 @@ activate :directory_indexes
 
 # Build-specific configuration
 configure :build do
+  
   # For example, change the Compass output style for deployment
   activate :minify_css
 
@@ -26,5 +27,11 @@ configure :build do
 
   # Use relative URLs
   activate :relative_assets
+
+  # Gzip
+  activate :gzip
+
+  # Minify HTML
+  activate :minify_html
 
 end
