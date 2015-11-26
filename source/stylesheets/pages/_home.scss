@@ -1,23 +1,19 @@
 // Home
 // ------------------------------------------------------------
+
+@keyframes gemMove {
+  from {
+    transform: translate3d(200px, -100px, 0) rotate3d(1, 1, .45, -20deg);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0) rotate3d(1, 1, .45, 0);
+  }
+}
+
 body.index,
 body.schedule {
-  background: $main url("/images/home-bg.jpg") no-repeat top right fixed;
-  background-size: 400px auto;
-
-  @include respond-min($bp-lg-phone) {
-    background-size: 768px auto;
-  }
-
-  @include respond-min($bp-gt-tablet) {
-    background-image: url("/images/home-bg-desktop.jpg") no-repeat 0 0;
-    background-size: 1024px auto;
-  }
-
-  @include respond-min($bp-gt-desktop) {
-    background-size: 1200px auto;
-  }
-
+  background: $main;
   // Header Colours
   .site-header a.logo{background-image: url("/images/logo-white.png");}
   .site-header .menu{background-image: url("/images/menu-white.png");}
@@ -26,24 +22,38 @@ body.schedule {
     &:hover{color: $contrast;}
   }
 
-}
-
-
-body {
-  animation-duration: 1s;
-  animation-name: bgsize;
-}
-
-@keyframes bgsize {
-  from {
-    background-size: 900px auto;
-    background-position: top right;
+  .site-header, .block, .site-footer, .main-content {
+    position: relative;
+    z-index: 10;
   }
 
-  to {
-    background-position: -80px right;
-    background-size: 1200px auto;
+  // Gem BG
+  &:before {
+    content: "";
+    display: block;
+    position: fixed;
+    z-index: 0;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 800px;
+    background: url("/images/home-bg.jpg") no-repeat top right;
+    background-size: 400px auto;
+    animation-duration: 1s;
+    animation-name: gemMove;
+
+    @include respond-min($bp-lg-phone) {
+      background-size: 768px auto;
+    }
+    @include respond-min($bp-gt-tablet) {
+      background-image: url("/images/home-bg-desktop.jpg") no-repeat 0 0;
+      background-size: 1024px auto;
+    }
+    @include respond-min($bp-gt-desktop) {
+      background-size: 1200px auto;
+    }
   }
+
 }
 
 body.schedule .main-nav ul li.nav-schedule a {
