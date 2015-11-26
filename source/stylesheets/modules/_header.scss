@@ -123,7 +123,7 @@ body.tickets .main-nav ul li.nav-tickets a {
   top: 0; 
   padding: 0;
   z-index: 999;
-  transform: translateY(-50px);
+  transform: translate3d(0, -50px, 0);
 
   .menu{background-image: url("/images/menu-red.png");}
 
@@ -147,7 +147,7 @@ body.tickets .main-nav ul li.nav-tickets a {
   }
 }
 
-body.scroll .scroll-header{transform: translateY(0);}
+body.scroll .scroll-header{transform: translate3d(0, 0, 0);}
 
 body.scroll.menu-open .scroll-header{
   height: 100%;

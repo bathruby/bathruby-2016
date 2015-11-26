@@ -57,8 +57,8 @@ $( document ).ready(function() {
 
     if ($(window).width() > 768 ) {
       windowScroll = $(window).scrollTop();
-      $('.speaker-list').css("transform", "translateY(-" + (windowScroll/5) + "px");
-      $('.block.speakers .cta').css("transform", "translateY(-" + (windowScroll/15) + "px");
+      $('.speaker-list').css("transform", "translate3d(0, -" + (windowScroll/5) + "px, 0");
+      $('.block.speakers .cta').css("transform", "translateY(0, -" + (windowScroll/15) + "px, 0");
     }
 
   });
