@@ -3,12 +3,12 @@
 
 @keyframes gemMove {
   from {
-    transform: translate3d(200px, -100px, 0) rotate3d(1, 1, .45, -20deg);
-    @include transform(translate3d(200px, -100px, 0) rotate3d(1, 1, .45, -20deg));
+    transform: translate(200px, -100px) rotate(-20deg);
+    // @include transform(translate3d(200px, -100px, 0) rotate3d(1, 1, .45, -20deg));
   }
   to {
-    transform: translate3d(0, 0, 0) rotate3d(1, 1, .45, 0);
-    @include transform(translate3d(0, 0, 0) rotate3d(1, 1, .45, 0));
+    transform: translate(0, 0) rotate(0deg);
+    // @include transform(translate3d(0, 0, 0) rotate3d(1, 1, .45, 0));
   }
 }
 
@@ -47,12 +47,12 @@ body.schedule {
     background-size: 400px auto;
     animation-duration: 1s;
     animation-name: gemMove;
-    -webkit-backface-visibility: hidden;
+    // -webkit-backface-visibility: hidden;
     @include respond-min($bp-lg-phone) {
       background-size: 768px auto;
     }
     @include respond-min($bp-gt-tablet) {
-      background-image: url("/images/home-bg-desktop.jpg") no-repeat 0 0;
+      background-image: url("/images/home-bg-desktop.jpg");
       background-size: 1024px auto;
     }
     @include respond-min($bp-gt-desktop) {
