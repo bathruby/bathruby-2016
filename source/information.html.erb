@@ -191,3 +191,51 @@ description: "Bath Ruby is a one day, single track conference in the beautiful B
 <%= partial "tickets" %>
 
 <%= partial "sponsors" %>
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDNcaE1Us-Jle846f697TbD4gPHVI2N6E8&amp;callback=initMap"></script>
+
+<script type="text/javascript">
+  // Google Maps
+  function initMap() {
+
+    var venue = {lat: 51.386205, lng: -2.362845};
+
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 15,
+      center: venue,
+      scrollwheel: false,
+      mapTypeControl: false,
+      streetViewControl: false,
+    });
+
+    var image = {
+      url: '/images/marker.png',
+      size: new google.maps.Size(66, 45),
+      scaledSize: new google.maps.Size(66, 45),
+      origin: new google.maps.Point(0, 0),
+      anchor: new google.maps.Point(33, 45)
+    };
+
+    var marker = new google.maps.Marker({
+      position: venue,
+      map: map,
+      animation: google.maps.Animation.DROP,
+      icon: image
+    });
+
+    var contentString = '<div id="content"><p>The Asemaby Rooms,<br />Bennett St,<br /> Bath,<br />BA1 2QH</p></div>';
+
+    var infowindow = new google.maps.InfoWindow({
+      content: contentString
+    });
+
+    marker.addListener('click', function() {
+      infowindow.open(map, marker);
+    });
+
+    google.maps.event.addDomListener(window, 'resize', function() {
+      map.setCenter(venue);
+    });
+    
+  }
+</script>

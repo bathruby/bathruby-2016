@@ -55,44 +55,10 @@ $( document ).ready(function() {
 
     if ($(window).width() > 768 ) {
       windowScroll = $(window).scrollTop();
-      $('.speaker-list').css("transform", "translate3d(0, -" + (windowScroll/5) + "px, 0");
-      $('#speakers .cta').css("transform", "translate3d(0, -" + (windowScroll/15) + "px, 0");
+      $('.speaker-list').css({transform: 'translateY(-' + windowScroll/5 + 'px)'})
+      $('#speakers .cta').css({transform: 'translateY(-' + windowScroll/15 + 'px)'})
     }
 
   });
 
 }); //eo:doc ready
-
-
-// Google Maps
-function initMap() {
-
-  var venue = {lat: 51.386205, lng: -2.362845};
-
-  var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 15,
-    center: venue,
-    scrollwheel: false,
-    mapTypeControl: false,
-    streetViewControl: false,
-  });
-
-  var image = {
-    url: '/images/marker.png',
-    size: new google.maps.Size(66, 45),
-    scaledSize: new google.maps.Size(66, 45),
-    origin: new google.maps.Point(0, 0),
-    anchor: new google.maps.Point(33, 45)
-  };
-
-  var marker = new google.maps.Marker({
-    position: venue,
-    map: map,
-    animation: google.maps.Animation.DROP,
-    icon: image
-  });
-
-  google.maps.event.addDomListener(window, 'resize', function() {
-    map.setCenter(venue);
-  });
-}
