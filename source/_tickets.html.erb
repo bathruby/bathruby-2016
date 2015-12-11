@@ -5,14 +5,20 @@
 
     <div class="releases">
 
-      <div class="release not-on-sale">
+      <div class="release">
         <h2>First Release</h2>
-        <p class="cost">Regular</p>
-        <p class="cost">Student</p>
-        <p class="sold-out-cost">Sold Out</p>
+        <p class="cost">
+          Regular
+          <span>&pound;59</span>
+        </p>
+        <p class="cost">
+          Student
+          <span>&pound;19</span>
+        </p>
+        <%= link_to 'Buy Now', 'https://ti.to/bath-ruby/2016', :class => "btn" %>
       </div>
 
-      <div class="release">
+      <div class="release not-on-sale">
         <h2>Second Release</h2>
         <p class="cost">
           Regular
@@ -20,9 +26,8 @@
         </p>
         <p class="cost">
           Student
-          <span>&pound;39</span>
+          <span>&pound;19</span>
         </p>
-        <%= link_to 'Buy Now', 'https://ti.to/bath-ruby/2016', :class => "btn" %>
       </div>
 
       <div class="release not-on-sale">
@@ -33,7 +38,7 @@
         </p>
         <p class="cost">
           Student
-          <span>&pound;39</span>
+          <span>&pound;19</span>
         </p>
       </div>
       
