@@ -1,4 +1,7 @@
 //= require "jquery"
+//= require "jquery.fancybox"
+//= require "jquery.fancybox-media"
+
 
 var menuButton = $('.menu'),
     mainNav = $('.site-header .main-nav'),
@@ -43,7 +46,7 @@ $( document ).ready(function() {
   });
 
 
-
+  // Scroll Fun
   $(window).scroll(function () { 
     
     scrollHeight = 150;
@@ -60,5 +63,22 @@ $( document ).ready(function() {
     }
 
   });
+
+  // Lightbox
+
+    $("#video").fancybox({
+    margin: 0,
+    padding: 0,
+    autoSize: false,
+    fitToView: false,
+      helpers : {
+        media : true,
+        overlay : {
+            css : {
+                'background' : 'rgba(22, 12, 46, 0.8)'
+            }
+        }
+      }
+    });
 
 }); //eo:doc ready
