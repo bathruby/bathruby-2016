@@ -34,4 +34,20 @@ configure :build do
   # Minify HTML
   activate :minify_html
 
+  # TODO: Figure out a way of changing the Content-Type and Content-Encoding
+  # so that S3 serves GZipped files properly
+  #
+  # after_build do |builder|
+  #   Dir.chdir(::Middleman::Application.server.inst.build_dir) do
+  #     files = Dir.glob('**/*.gz')
+  #     files.map { |file| file[0..-4] }.each do |f| # find corresponding non-gz file by removing ".gz" at the end
+  #       unless File.directory?(f)
+  #         output_filename = f + '.txt'
+  #         File.rename(f, output_filename)
+  #         File.rename("#{f}.gz", f)
+  #         builder.say_status :mv, output_filename
+  #       end
+  #     end
+  #   end
+  # end
 end
