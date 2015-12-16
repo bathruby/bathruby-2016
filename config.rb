@@ -42,12 +42,13 @@ AWS_CLOUDFRONT_DISTRIBUTION_ID  = 'E2UCPTMXLPN6TX'
 
 # Variables: Sent in on CLI by rake task via ENV
 #------------------------------------------------------------------------
-AWS_ACCESS_KEY                  = ENV['AWS_ACCESS_KEY']
-AWS_SECRET                      = ENV['AWS_SECRET']
+# AWS_ACCESS_KEY                  = ENV['AWS_ACCESS_KEY']
+# AWS_SECRET                      = ENV['AWS_SECRET']
 
 # https://github.com/fredjean/middleman-s3_sync
 activate :s3_sync do |s3_sync|
   s3_sync.bucket                     = AWS_BUCKET
+  s3_sync.region                     = 'eu-west-1'
   s3_sync.aws_access_key_id          = AWS_ACCESS_KEY
   s3_sync.aws_secret_access_key      = AWS_SECRET
   s3_sync.delete                     = false # We delete stray files by default.
