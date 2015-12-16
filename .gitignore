@@ -22,3 +22,4 @@ build/
 .sass-cache
 bin/
 .bundle
+.s3_sync

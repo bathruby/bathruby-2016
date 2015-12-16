@@ -33,21 +33,30 @@ configure :build do
 
   # Minify HTML
   activate :minify_html
+end
 
-  # TODO: Figure out a way of changing the Content-Type and Content-Encoding
-  # so that S3 serves GZipped files properly
-  #
-  # after_build do |builder|
-  #   Dir.chdir(::Middleman::Application.server.inst.build_dir) do
-  #     files = Dir.glob('**/*.gz')
-  #     files.map { |file| file[0..-4] }.each do |f| # find corresponding non-gz file by removing ".gz" at the end
-  #       unless File.directory?(f)
-  #         output_filename = f + '.txt'
-  #         File.rename(f, output_filename)
-  #         File.rename("#{f}.gz", f)
-  #         builder.say_status :mv, output_filename
-  #       end
-  #     end
-  #   end
-  # end
+# Configuration variables specific to each project
+#------------------------------------------------------------------------
+AWS_BUCKET                      = '2016.bathruby.uk'
+AWS_CLOUDFRONT_DISTRIBUTION_ID  = 'E2UCPTMXLPN6TX'
+
+# Variables: Sent in on CLI by rake task via ENV
+#------------------------------------------------------------------------
+AWS_ACCESS_KEY                  = ENV['AWS_ACCESS_KEY']
+AWS_SECRET                      = ENV['AWS_SECRET']
+
+# https://github.com/fredjean/middleman-s3_sync
+activate :s3_sync do |s3_sync|
+  s3_sync.bucket                     = AWS_BUCKET
+  s3_sync.aws_access_key_id          = AWS_ACCESS_KEY
+  s3_sync.aws_secret_access_key      = AWS_SECRET
+  s3_sync.delete                     = false # We delete stray files by default.
+end
+
+# https://github.com/andrusha/middleman-cloudfront
+activate :cloudfront do |cf|
+  cf.access_key_id                    = AWS_ACCESS_KEY
+  cf.secret_access_key                = AWS_SECRET
+  cf.distribution_id                  = AWS_CLOUDFRONT_DISTRIBUTION_ID
+  # cf.filter = /\.html$/i
 end
