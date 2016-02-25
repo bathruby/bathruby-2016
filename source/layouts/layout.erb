@@ -64,7 +64,7 @@
     </script>
   </head>
 
-  <body class="<%= page_classes %>">
+  <body class="<%= page_classes.to_s.gsub("sponsor", "supporter") %>">
     <div class="page">
 
       <header class="site-header">

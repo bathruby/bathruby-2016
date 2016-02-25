@@ -6,7 +6,7 @@
 }
 
 // Sponsors Page
-body.sponsors{
+body.supporters{
 
   p.download{
     @include overline(default);
@@ -28,7 +28,7 @@ body.sponsors{
 
 
 // Sponsors Footer
-.block.sponsors {
+.block.supporters {
   background-color: $light;
   text-align: center;
   h1{text-align: left;}
@@ -37,7 +37,7 @@ body.sponsors{
     padding: 0 0 10px 0;
     margin: 20px 0 40px 0;
   }
-  .sponsor-logo{
+  .company-logo{
     display: inline-block;
     margin: 0 10px 40px 10px;
   }

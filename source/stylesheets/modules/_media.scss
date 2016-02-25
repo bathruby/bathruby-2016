@@ -3,14 +3,14 @@
   @include clearfix();
   @include overline(default);
   margin-bottom: 20px;
-  .sponsor-logo{
+  .company-logo{
     margin: 0 auto 20px auto;
     display: block;
     max-width: 300px;
   }
 
   @include respond-min($bp-tablet){
-    .sponsor-logo{
+    .company-logo{
       width: 30%;
       float: left;
       margin-right: 5%;
