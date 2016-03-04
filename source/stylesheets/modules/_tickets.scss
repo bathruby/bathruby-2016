@@ -43,6 +43,16 @@
 
 }
 
+.waiting-list{
+  width: 100%;
+
+  .btn{
+    margin: 0 auto 60px auto;
+    max-width:290px;
+    display: block;
+  }
+}
+
 .cost{
   color: $main;
   float: left;
