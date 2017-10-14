@@ -1,6 +1,16 @@
 <!doctype html>
 <html class="no-js">
   <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-6479775-18"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-6479775-18');
+    </script>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
@@ -13,21 +23,21 @@
     <!-- Social Meta Tags -->
     <meta property="og:title" content="Bath Ruby Conference - 11th March 2016" />
     <meta property="og:site_name" content="Bath Ruby" />
-    <meta property="og:url" content="http://2016.bathruby.uk/" />
+    <meta property="og:url" content="https://2016.bathruby.uk/" />
     <meta property="og:description" content="<%= current_page.data.description %>" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="en_GB" />
-    <meta property="og:image" content="<%= "http://2016.bathruby.uk/" + image_path('bathruby-social-banner.png') %>" />
+    <meta property="og:image" content="<%= "https://2016.bathruby.uk/" + image_path('bathruby-social-banner.png') %>" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@BathRuby">
-    <meta name="twitter:url" content="http://2016.bathruby.uk/">
+    <meta name="twitter:url" content="https://2016.bathruby.uk/">
     <meta name="twitter:creator" content="@BathRuby">
     <meta name="twitter:title" content="Bath Ruby Conference - 11th March 2016">
     <meta name="twitter:description" content="<%= current_page.data.description %>">
-    <meta name="twitter:image:src" content="<%= "http://2016.bathruby.uk/" + image_path('bathruby-social-banner.png') %>">
+    <meta name="twitter:image:src" content="<%= "https://2016.bathruby.uk/" + image_path('bathruby-social-banner.png') %>">
 
     <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="57x57" href="/images/icons/apple-icon-57x57.png">
@@ -51,20 +61,23 @@
     <%= stylesheet_link_tag "application" %>
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
     <%= javascript_include_tag 'modenizer' %>
-    <!-- Google Analytics -->
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-6479775-18', 'auto');
-      ga('send', 'pageview');
-
-    </script>
+    <%= javascript_include_tag 'application' %>
   </head>
 
   <body class="<%= page_classes.to_s.gsub("sponsor", "supporter") %>">
+    <div style="position: fixed; top: 0; left: 0; width: 100%; background-color: #ff6; color: #000; font-size: 16px; font-family: &quot;Helvetica Neue&quot;, Ariel, Helvetica; padding: 0.5em 0; margin: 0; text-align: left; overflow: hidden; clear: both; z-index: 9999" id="old-site-notice">
+      <span style="display: inline-block; color: #000; width: 90%; padding-left: 1em; text-align: center">
+        <strong>Hello!</strong> This is the website for a past conference. Click <a href="http://latest.bathruby.uk" style="display: inline; color: #69f; font-weight: bold; text-decoration: none; border: none; background: transparent">here</a> to visit the latest one.
+      </span>
+      <a style="display: inline-block; position: absolute; right: 1em; color: #999; font-weight: bold; text-decoration: none; border: none; background: transparent" href="#" title="dismiss" id="hide-notice">×</a>
+    </div>
+
+    <script type="text/javascript">
+      $('#hide-notice').click(function() {
+        $('#old-site-notice').fadeOut();
+      })
+    </script>
+
     <div class="page">
 
       <header class="site-header">
@@ -96,8 +109,6 @@
       </footer>
 
     </div>
-
-    <%= javascript_include_tag 'application' %>
 
   </body>
 
